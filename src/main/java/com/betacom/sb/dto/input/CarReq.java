@@ -2,7 +2,6 @@ package com.betacom.sb.dto.input;
 
 import com.betacom.sb.enums.Category;
 import com.betacom.sb.enums.FuelType;
-import com.betacom.sb.enums.VehicleType;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

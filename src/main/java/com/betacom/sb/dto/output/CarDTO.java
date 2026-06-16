@@ -16,4 +16,6 @@ public class CarDTO {
 	private String licensePlate;
 	private Integer displacementCc;
 	private Integer doorCount;
+	
+	private VehicleDTO vehicle;
 }

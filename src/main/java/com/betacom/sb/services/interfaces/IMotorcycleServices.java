@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.betacom.sb.dto.input.CarReq;
 import com.betacom.sb.dto.input.MotorcycleReq;
-import com.betacom.sb.dto.output.CarDTO;
 import com.betacom.sb.dto.output.MotorcycleDTO;
 
 @Service

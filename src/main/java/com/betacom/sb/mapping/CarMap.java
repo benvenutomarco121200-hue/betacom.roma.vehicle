@@ -3,6 +3,7 @@ package com.betacom.sb.mapping;
 import java.util.List;
 
 import com.betacom.sb.dto.output.CarDTO;
+import com.betacom.sb.dto.output.VehicleDTO;
 import com.betacom.sb.models.Car;
 
 public class CarMap {
@@ -17,7 +18,16 @@ public class CarMap {
 				.licensePlate(car.getLicensePlate())
 				.displacementCc(car.getDisplacementCc())
 				.doorCount(car.getDoorCount())
-				//.vehicle(VehicleMap.buildVehicleDTO(car.getVehicle()))
+				.vehicle(VehicleDTO.builder()
+						.id(car.getVehicle().getId())
+						.vehicleType(car.getVehicle().getVehicleType())
+						.category(car.getVehicle().getCategory())
+						.wheelCount(car.getVehicle().getWheelCount())
+						.color(car.getVehicle().getColor())
+						.brand(car.getVehicle().getBrand())
+						.productionYear(car.getVehicle().getProductionYear())
+						.model(car.getVehicle().getModel())
+						.build())
 				.build();
 	}
 }
