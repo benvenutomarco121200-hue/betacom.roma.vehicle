@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.CarReq;
-import com.betacom.sb.dto.input.VehicleReq;
 import com.betacom.sb.dto.output.CarDTO;
 import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.CarMap;
@@ -34,7 +33,6 @@ public class CarImpl implements ICarServices{
 				.orElseThrow(() -> new Exception("car not found"));
 	
 		return CarMap.buildCarDTO(car);
-		
 	}
 
 	@Override
