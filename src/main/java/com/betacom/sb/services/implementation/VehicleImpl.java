@@ -10,6 +10,7 @@ import com.betacom.sb.models.Vehicle;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.IVehicleServices;
 
+import exceptions.BetacomRomaException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -24,7 +25,7 @@ public class VehicleImpl implements IVehicleServices{
 	public VehicleDTO getById(Long id) throws Exception {
 		log.debug("get at id {}", id);
 		Vehicle vehicle = repoVehicle.findById(id)
-				.orElseThrow(() -> new Exception("vehicle not found"));
+				.orElseThrow(() -> new BetacomRomaException("vehicle not found"));
 	
 		return VehicleMap.buildVehicleDTO(vehicle);
 	}

@@ -14,6 +14,7 @@ import com.betacom.sb.repositories.ICarRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.ICarServices;
 
+import exceptions.BetacomRomaException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +31,7 @@ public class CarImpl implements ICarServices{
 	public CarDTO getById(Long id) throws Exception {
 		log.debug("get at id {}", id);
 		Car car = repoCar.findById(id)
-				.orElseThrow(() -> new Exception("car not found"));
+				.orElseThrow(() -> new BetacomRomaException("car not found"));
 	
 		return CarMap.buildCarDTO(car);
 	}
@@ -48,20 +49,20 @@ public class CarImpl implements ICarServices{
 		log.debug("create {}", req);
 		Car car = new Car();
 		if (req.getLicensePlate() == null) {
-			throw new Exception("license plate cannot be null");
+			throw new BetacomRomaException("license plate cannot be null");
 		}
 		if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
-			throw new Exception("license plate already present");
+			throw new BetacomRomaException("license plate already present");
 		}
 		car.setLicensePlate(req.getLicensePlate());
 		
 		if (req.getDisplacementCc() == null) {
-			throw new Exception("displacement cc cannot be null");
+			throw new BetacomRomaException("displacement cc cannot be null");
 		}
 		car.setDisplacementCc(req.getDisplacementCc());
 		
 		if (req.getDoorCount() == null){
-			throw new Exception("door count cannot be null");
+			throw new BetacomRomaException("door count cannot be null");
 		}
 		car.setDoorCount(req.getDoorCount());
 		
@@ -90,15 +91,15 @@ public class CarImpl implements ICarServices{
 	    log.debug("update {}", req);
 
 	    if (req.getId() == null || req.getId() == 0) {
-	        throw new Exception("Car ID is required for update");
+	        throw new BetacomRomaException("Car ID is required for update");
 	    }
 
 	    Car car = repoCar.findById(req.getId())
-	            .orElseThrow(() -> new Exception("Car not found with id: " + req.getId()));
+	            .orElseThrow(() -> new BetacomRomaException("Car not found with id: " + req.getId()));
 
 	    if (!car.getLicensePlate().equals(req.getLicensePlate())) {
 	        if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
-	            throw new Exception("The new license plate is already present on another car");
+	            throw new BetacomRomaException("The new license plate is already present on another car");
 	        }
 	        car.setLicensePlate(req.getLicensePlate());
 	    }
@@ -108,7 +109,7 @@ public class CarImpl implements ICarServices{
 
 	    Vehicle vehicle = car.getVehicle();
 	    if (vehicle == null) {
-	        throw new Exception("Data integrity error: Linked vehicle not found for this car");
+	        throw new BetacomRomaException("Data integrity error: Linked vehicle not found for this car");
 	    }
 
 	    vehicle.setBrand(req.getBrand());
@@ -127,7 +128,7 @@ public class CarImpl implements ICarServices{
 	public void delete(Long id) throws Exception {
 		log.debug("delete {}", id);
 		Car car = repoCar.findById(id)
-				.orElseThrow(() -> new Exception("id not valid"));
+				.orElseThrow(() -> new BetacomRomaException("id not valid"));
 		
 		repoCar.delete(car);
 	}

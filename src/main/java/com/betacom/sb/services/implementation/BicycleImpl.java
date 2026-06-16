@@ -14,6 +14,7 @@ import com.betacom.sb.repositories.IBicycleRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.IBicycleServices;
 
+import exceptions.BetacomRomaException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +31,7 @@ public class BicycleImpl implements IBicycleServices {
     public BicycleDTO getById(Long id) throws Exception {
         log.debug("get at id {}", id);
         Bicycle bicycle = repoBicycle.findById(id)
-                .orElseThrow(() -> new Exception("bicycle not found"));
+                .orElseThrow(() -> new BetacomRomaException("bicycle not found"));
         return BicycleMap.buildBicycleDTO(bicycle);
     }
 
@@ -47,16 +48,16 @@ public class BicycleImpl implements IBicycleServices {
         log.debug("create {}", req);
 
         if (req.getGearCount() == null) {
-            throw new Exception("gear count cannot be null");
+            throw new BetacomRomaException("gear count cannot be null");
         }
         if (req.getBrakeType() == null) {
-            throw new Exception("brake type cannot be null");
+            throw new BetacomRomaException("brake type cannot be null");
         }
         if (req.getSuspensionType() == null) {
-            throw new Exception("suspension type cannot be null");
+            throw new BetacomRomaException("suspension type cannot be null");
         }
         if (req.getIsFoldable() == null) {
-            throw new Exception("is foldable cannot be null");
+            throw new BetacomRomaException("is foldable cannot be null");
         }
 
         Bicycle bicycle = new Bicycle();
@@ -88,11 +89,11 @@ public class BicycleImpl implements IBicycleServices {
         log.debug("update {}", req);
 
         if (req.getId() == null || req.getId() == 0) {
-            throw new Exception("Bicycle ID is required for update");
+            throw new BetacomRomaException("Bicycle ID is required for update");
         }
 
         Bicycle bicycle = repoBicycle.findById(req.getId())
-                .orElseThrow(() -> new Exception("Bicycle not found with id: " + req.getId()));
+                .orElseThrow(() -> new BetacomRomaException("Bicycle not found with id: " + req.getId()));
 
         bicycle.setGearCount(req.getGearCount());
         bicycle.setBrakeType(req.getBrakeType());
@@ -101,7 +102,7 @@ public class BicycleImpl implements IBicycleServices {
 
         Vehicle vehicle = bicycle.getVehicle();
         if (vehicle == null) {
-            throw new Exception("Data integrity error: Linked vehicle not found for this bicycle");
+            throw new BetacomRomaException("Data integrity error: Linked vehicle not found for this bicycle");
         }
 
         vehicle.setBrand(req.getBrand());
@@ -120,7 +121,7 @@ public class BicycleImpl implements IBicycleServices {
     public void delete(Long id) throws Exception {
         log.debug("delete {}", id);
         Bicycle bicycle = repoBicycle.findById(id)
-                .orElseThrow(() -> new Exception("id not valid"));
+                .orElseThrow(() -> new BetacomRomaException("id not valid"));
         repoBicycle.delete(bicycle);
     }
 }

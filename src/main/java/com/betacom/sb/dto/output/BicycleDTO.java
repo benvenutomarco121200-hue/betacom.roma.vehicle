@@ -20,4 +20,6 @@ public class BicycleDTO {
     private BrakeType brakeType;
     private SuspensionType suspensionType;
     private Boolean isFoldable;
+    
+    private VehicleDTO vehicle;
 }

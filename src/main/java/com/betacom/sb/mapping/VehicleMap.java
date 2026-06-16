@@ -2,9 +2,6 @@ package com.betacom.sb.mapping;
 
 import java.util.List;
 
-import com.betacom.sb.dto.output.BicycleDTO;
-import com.betacom.sb.dto.output.CarDTO;
-import com.betacom.sb.dto.output.MotorcycleDTO;
 import com.betacom.sb.dto.output.VehicleDTO;
 import com.betacom.sb.models.Vehicle;
 

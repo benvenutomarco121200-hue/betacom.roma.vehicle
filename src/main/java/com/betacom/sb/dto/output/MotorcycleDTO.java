@@ -15,4 +15,6 @@ public class MotorcycleDTO {
 	private Long id;
 	private String licensePlate;
 	private Integer displacementCc;
+	
+	private VehicleDTO vehicle;
 }
