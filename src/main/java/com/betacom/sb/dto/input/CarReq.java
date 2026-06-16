@@ -16,5 +16,4 @@ public class CarReq {
 	private String licensePlate;
 	private Integer displacementCc;
 	private Integer doorCount;
-    private Long vehicleId;
 }

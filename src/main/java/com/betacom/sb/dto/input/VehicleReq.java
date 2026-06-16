@@ -31,4 +31,5 @@ public class VehicleReq {
     private String brand;
     private Integer productionYear;
     private String model;
+    private FuelType fuelType;
 }
