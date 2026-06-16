@@ -6,10 +6,8 @@ import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.CarReq;
 import com.betacom.sb.dto.output.CarDTO;
-import com.betacom.sb.dto.output.VehicleDTO;
 import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.CarMap;
-import com.betacom.sb.mapping.VehicleMap;
 import com.betacom.sb.models.Car;
 import com.betacom.sb.models.Vehicle;
 import com.betacom.sb.repositories.ICarRepository;
