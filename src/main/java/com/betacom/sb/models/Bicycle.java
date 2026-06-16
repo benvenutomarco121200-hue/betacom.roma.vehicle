@@ -3,6 +3,7 @@ package com.betacom.sb.models;
 import com.betacom.sb.enums.BrakeType;
 import com.betacom.sb.enums.SuspensionType;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -41,7 +42,7 @@ public class Bicycle {
 	@Column(name = "is_foldable", nullable = false)
 	private Boolean isFoldable;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "vehicle_id", nullable = false, unique = true, foreignKey = @ForeignKey(name = "fk_vehicle_bicycle"))
     private Vehicle vehicle;
 }

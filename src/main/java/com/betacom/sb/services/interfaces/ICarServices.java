@@ -14,7 +14,7 @@ public interface ICarServices {
 	CarDTO getById(Long id) throws Exception;
 	List<CarDTO> list() throws Exception;
 	
-	void create(CarReq carReq, VehicleReq vehicleReq) throws Exception;
+	void create(CarReq req) throws Exception;
 	void update(CarReq req) throws Exception;
 	void delete(Long id) throws Exception;
 }

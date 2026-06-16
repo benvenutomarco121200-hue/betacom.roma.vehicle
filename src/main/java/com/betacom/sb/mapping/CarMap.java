@@ -17,7 +17,7 @@ public class CarMap {
 				.licensePlate(car.getLicensePlate())
 				.displacementCc(car.getDisplacementCc())
 				.doorCount(car.getDoorCount())
-				.vehicle(VehicleMap.buildVehicleDTO(car.getVehicle()))
+				//.vehicle(VehicleMap.buildVehicleDTO(car.getVehicle()))
 				.build();
 	}
 }
