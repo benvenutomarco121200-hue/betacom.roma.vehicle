@@ -25,8 +25,8 @@ public class Motorcycle {
 	@Column(name = "license_plate", nullable = false, unique = true, length = 7)
 	private String licensePlate;
 	
-	@Column(nullable = false)
-	private Integer cc;
+	@Column(name = "displacement_cc", nullable = false)
+	private Integer displacementCc;
 	
 	@OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vehicle_id", nullable = false, unique = true, foreignKey = @ForeignKey(name = "fk_vehicle_motorcycle"))

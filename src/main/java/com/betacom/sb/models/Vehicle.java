@@ -40,8 +40,8 @@ public class Vehicle {
     @Column(nullable = false, length = 50)
     private Category category;
     
-    @Column(name = "wheel_number", nullable = false)
-    private Integer wheelNumber;
+    @Column(name = "wheel_count", nullable = false)
+    private Integer wheelCount;
     
     @Column(nullable = false, length = 50)
     private String color;

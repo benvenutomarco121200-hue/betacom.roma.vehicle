@@ -1,10 +1,10 @@
 package com.betacom.sb.enums;
 
 public enum FuelType {
-	GPL, 
+	LPG, 
 	DIESEL, 
-	BENZINA, 
+	PETROL, 
 	HYBRID, 
-	ELETTRICA, 
-	NESSUNA
+	ELECTRIC, 
+	NONE
 }
