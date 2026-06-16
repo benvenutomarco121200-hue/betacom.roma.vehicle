@@ -1,6 +1,6 @@
 package com.betacom.sb.models;
 
-import com.betacom.sb.enums.BreakType;
+import com.betacom.sb.enums.BrakeType;
 import com.betacom.sb.enums.SuspensionType;
 
 import jakarta.persistence.Column;
@@ -27,18 +27,18 @@ public class Bicycle {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false)
-	private Integer gears;
+	@Column(name = "gear_count", nullable = false)
+	private Integer gearCount;
 	
     @Enumerated(EnumType.STRING)
-	@Column(nullable = false, length = 50)
-	private BreakType breakType;
+	@Column(name = "brake_type", nullable = false, length = 50)
+	private BrakeType brakeType;
 	
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 50)
+    @Column(name = "suspension_type", nullable = false, length = 50)
 	private SuspensionType suspensionType;
 	
-	@Column(nullable = false)
+	@Column(name = "is_foldable", nullable = false)
 	private Boolean isFoldable;
 	
 	@OneToOne(fetch = FetchType.LAZY)

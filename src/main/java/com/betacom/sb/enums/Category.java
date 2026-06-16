@@ -1,13 +1,13 @@
 package com.betacom.sb.enums;
 
 public enum Category {
-    STRADALE , 
+    STREET, 
     SUV, 
-    FUORISTRADA, 
-    BERLINA, 
+    OFF_ROAD, 
+    SEDAN, 
     MOTOCROSS,
     ENDURO, 
-    CORSA,
+    RACING,
     MOUNTAIN_BIKE,
     SCOOTER,
     PICK_UP
