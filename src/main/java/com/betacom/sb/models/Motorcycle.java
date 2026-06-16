@@ -1,5 +1,6 @@
 package com.betacom.sb.models;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -28,7 +29,7 @@ public class Motorcycle {
 	@Column(name = "displacement_cc", nullable = false)
 	private Integer displacementCc;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "vehicle_id", nullable = false, unique = true, foreignKey = @ForeignKey(name = "fk_vehicle_motorcycle"))
     private Vehicle vehicle;
 }
