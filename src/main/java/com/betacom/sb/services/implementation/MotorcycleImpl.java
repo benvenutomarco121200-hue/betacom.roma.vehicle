@@ -1,18 +1,19 @@
 package com.betacom.sb.services.implementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.MotorcycleReq;
 import com.betacom.sb.dto.output.MotorcycleDTO;
-import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.MotorcycleMap;
 import com.betacom.sb.models.Motorcycle;
 import com.betacom.sb.models.Vehicle;
 import com.betacom.sb.repositories.IMotorcycleRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.IMotorcycleServices;
+import com.betacom.sb.utils.Utils;
 
 import exceptions.BetacomRomaException;
 import jakarta.transaction.Transactional;
@@ -45,19 +46,10 @@ public class MotorcycleImpl implements IMotorcycleServices{
 		}
 		moto.setDisplacementCc(req.getDisplacementCc());
 		
-		Vehicle vehicle = new Vehicle();
-		
-	    vehicle.setBrand(req.getBrand());
-	    vehicle.setModel(req.getModel());
-	    vehicle.setColor(req.getColor());
-	    vehicle.setWheelCount(req.getWheelCount());
-	    vehicle.setProductionYear(req.getProductionYear());
-	    vehicle.setFuelType(req.getFuelType());
-	    vehicle.setCategory(req.getCategory());
-	    vehicle.setVehicleType(VehicleType.MOTORCYCLE);
+		Vehicle vehicle = Utils.checkVehicleMotorcycleCreate(req);
 	    
 	    moto.setVehicle(vehicle);
-	    vehicle.setMotorcycle(moto);;
+	    vehicle.setMotorcycle(moto);
 		
 	    repoVehicle.save(vehicle);
 		repoMoto.save(moto);
@@ -70,33 +62,22 @@ public class MotorcycleImpl implements IMotorcycleServices{
 		log.debug("update {}", req);
 
 	    if (req.getId() == null || req.getId() == 0) {
-	        throw new BetacomRomaException("Car ID is required for update");
+	        throw new BetacomRomaException("Motorcycle ID is required for update");
 	    }
 
 	    Motorcycle moto= repoMoto.findById(req.getId())
-	            .orElseThrow(() -> new BetacomRomaException("Car not found with id: " + req.getId()));
+	            .orElseThrow(() -> new BetacomRomaException("Motorcycle not found with id: " + req.getId()));
 
 	    if (!moto.getLicensePlate().equals(req.getLicensePlate())) {
 	        if (repoMoto.existsByLicensePlate(req.getLicensePlate())) {
-	            throw new BetacomRomaException("The new license plate is already present on another car");
+	            throw new BetacomRomaException("The new license plate is already present on another motorcycle");
 	        }
-	        moto.setLicensePlate(req.getLicensePlate());
+	        Optional.ofNullable(req.getLicensePlate()).ifPresent(moto::setLicensePlate);
 	    }
 
-	    moto.setDisplacementCc(req.getDisplacementCc());
-
-	    Vehicle vehicle = moto.getVehicle();
-	    if (vehicle == null) {
-	        throw new BetacomRomaException("Data integrity error: Linked vehicle not found for this car");
-	    }
-
-	    vehicle.setBrand(req.getBrand());
-	    vehicle.setModel(req.getModel());
-	    vehicle.setColor(req.getColor());
-	    vehicle.setWheelCount(req.getWheelCount());
-	    vehicle.setProductionYear(req.getProductionYear());
-	    vehicle.setFuelType(req.getFuelType());
-	    vehicle.setCategory(req.getCategory());
+	    Optional.ofNullable(req.getDisplacementCc()).ifPresent(moto::setDisplacementCc);
+	    
+	    Utils.checkVehicleMotorcycleUpdate(req, moto);
 
 	    repoMoto.save(moto);
 		
