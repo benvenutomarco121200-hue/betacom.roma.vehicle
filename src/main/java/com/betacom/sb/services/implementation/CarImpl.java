@@ -1,18 +1,19 @@
 package com.betacom.sb.services.implementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.CarReq;
 import com.betacom.sb.dto.output.CarDTO;
-import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.CarMap;
 import com.betacom.sb.models.Car;
 import com.betacom.sb.models.Vehicle;
 import com.betacom.sb.repositories.ICarRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.ICarServices;
+import com.betacom.sb.utils.Utils;
 
 import exceptions.BetacomRomaException;
 import jakarta.transaction.Transactional;
@@ -66,17 +67,7 @@ public class CarImpl implements ICarServices{
 		}
 		car.setDoorCount(req.getDoorCount());
 		
-		Vehicle vehicle = new Vehicle();
-		
-		
-	    vehicle.setBrand(req.getBrand());
-	    vehicle.setModel(req.getModel());
-	    vehicle.setColor(req.getColor());
-	    vehicle.setWheelCount(req.getWheelCount());
-	    vehicle.setProductionYear(req.getProductionYear());
-	    vehicle.setFuelType(req.getFuelType());
-	    vehicle.setCategory(req.getCategory());
-	    vehicle.setVehicleType(VehicleType.CAR);
+		Vehicle vehicle = Utils.checkVehicleCarCreate(req);
 	    
 	    car.setVehicle(vehicle);
 	    vehicle.setCar(car);
@@ -101,24 +92,13 @@ public class CarImpl implements ICarServices{
 	        if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
 	            throw new BetacomRomaException("The new license plate is already present on another car");
 	        }
-	        car.setLicensePlate(req.getLicensePlate());
+	        Optional.ofNullable(req.getLicensePlate()).ifPresent(car::setLicensePlate);
 	    }
 
-	    car.setDisplacementCc(req.getDisplacementCc());
-	    car.setDoorCount(req.getDoorCount());
+	    Optional.ofNullable(req.getDisplacementCc()).ifPresent(car::setDisplacementCc);
+	    Optional.ofNullable(req.getDoorCount()).ifPresent(car::setDoorCount);
 
-	    Vehicle vehicle = car.getVehicle();
-	    if (vehicle == null) {
-	        throw new BetacomRomaException("Data integrity error: Linked vehicle not found for this car");
-	    }
-
-	    vehicle.setBrand(req.getBrand());
-	    vehicle.setModel(req.getModel());
-	    vehicle.setColor(req.getColor());
-	    vehicle.setWheelCount(req.getWheelCount());
-	    vehicle.setProductionYear(req.getProductionYear());
-	    vehicle.setFuelType(req.getFuelType());
-	    vehicle.setCategory(req.getCategory());
+	    Utils.checkVehicleCarUpdate(req, car);
 
 	    repoCar.save(car);
 	}

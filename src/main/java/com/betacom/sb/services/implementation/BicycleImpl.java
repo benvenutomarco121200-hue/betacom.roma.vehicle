@@ -1,18 +1,19 @@
 package com.betacom.sb.services.implementation;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.BicycleReq;
 import com.betacom.sb.dto.output.BicycleDTO;
-import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.BicycleMap;
 import com.betacom.sb.models.Bicycle;
 import com.betacom.sb.models.Vehicle;
 import com.betacom.sb.repositories.IBicycleRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.IBicycleServices;
+import com.betacom.sb.utils.Utils;
 
 import exceptions.BetacomRomaException;
 import jakarta.transaction.Transactional;
@@ -65,16 +66,8 @@ public class BicycleImpl implements IBicycleServices {
         bicycle.setBrakeType(req.getBrakeType());
         bicycle.setSuspensionType(req.getSuspensionType());
         bicycle.setIsFoldable(req.getIsFoldable());
-
-        Vehicle vehicle = new Vehicle();
-        vehicle.setBrand(req.getBrand());
-        vehicle.setModel(req.getModel());
-        vehicle.setColor(req.getColor());
-        vehicle.setWheelCount(req.getWheelCount());
-        vehicle.setProductionYear(req.getProductionYear());
-        vehicle.setFuelType(req.getFuelType());
-        vehicle.setCategory(req.getCategory());
-        vehicle.setVehicleType(VehicleType.BICYCLE);
+        
+        Vehicle vehicle = Utils.checkVehicleBicycleCreate(req);
 
         bicycle.setVehicle(vehicle);
         vehicle.setBicycle(bicycle);
@@ -94,24 +87,13 @@ public class BicycleImpl implements IBicycleServices {
 
         Bicycle bicycle = repoBicycle.findById(req.getId())
                 .orElseThrow(() -> new BetacomRomaException("Bicycle not found with id: " + req.getId()));
-
-        bicycle.setGearCount(req.getGearCount());
-        bicycle.setBrakeType(req.getBrakeType());
-        bicycle.setSuspensionType(req.getSuspensionType());
-        bicycle.setIsFoldable(req.getIsFoldable());
-
-        Vehicle vehicle = bicycle.getVehicle();
-        if (vehicle == null) {
-            throw new BetacomRomaException("Data integrity error: Linked vehicle not found for this bicycle");
-        }
-
-        vehicle.setBrand(req.getBrand());
-        vehicle.setModel(req.getModel());
-        vehicle.setColor(req.getColor());
-        vehicle.setWheelCount(req.getWheelCount());
-        vehicle.setProductionYear(req.getProductionYear());
-        vehicle.setFuelType(req.getFuelType());
-        vehicle.setCategory(req.getCategory());
+        
+	    Optional.ofNullable(req.getGearCount()).ifPresent(bicycle::setGearCount);
+	    Optional.ofNullable(req.getBrakeType()).ifPresent(bicycle::setBrakeType);
+	    Optional.ofNullable(req.getSuspensionType()).ifPresent(bicycle::setSuspensionType);
+	    Optional.ofNullable(req.getIsFoldable()).ifPresent(bicycle::setIsFoldable);
+        
+        Utils.checkVehicleBicycleUpdate(req, bicycle);
 
         repoBicycle.save(bicycle);
     }
