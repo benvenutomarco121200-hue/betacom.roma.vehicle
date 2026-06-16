@@ -1183,3 +1183,1559 @@ Caused by: org.springframework.data.core.PropertyReferenceException: No property
 2026-06-16T12:55:27.368+02:00  INFO 12664 --- [vehicle_SB_JPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-16T12:55:27.369+02:00  INFO 12664 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2026-06-16T12:55:27.372+02:00  INFO 12664 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-16T12:55:27.461+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 12664 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T12:55:27.462+02:00 DEBUG 12664 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T12:55:27.463+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T12:55:27.615+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T12:55:27.631+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2026-06-16T12:55:27.695+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T12:55:27.696+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T12:55:27.696+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T12:55:27.716+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 252 ms
+2026-06-16T12:55:27.747+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-16T12:55:27.796+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@7d4db963
+2026-06-16T12:55:27.796+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-16T12:55:27.797+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T12:55:27.820+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T12:55:27.833+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T12:55:27.911+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T12:55:27.916+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T12:55:27.982+02:00  WARN 12664 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T12:55:28.083+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T12:55:28.085+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.645 seconds (process running for 78.819)
+2026-06-16T12:55:28.087+02:00  WARN 12664 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T12:55:28.087+02:00  WARN 12664 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T12:55:28.088+02:00  INFO 12664 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T12:55:30.538+02:00  INFO 12664 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T12:55:30.538+02:00  INFO 12664 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T12:55:30.540+02:00  INFO 12664 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-16T12:55:30.550+02:00 DEBUG 12664 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@480d4ef0
+2026-06-16T12:55:30.603+02:00  WARN 12664 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-06-16T12:55:30.603+02:00  WARN 12664 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] org.hibernate.orm.jdbc.error             : ERROR: null value in column "production_year" of relation "vehicles" violates not-null constraint
+  Dettaglio: Failing row contains (null, null, 1, null, null, null, null, null, CAR).
+2026-06-16T14:15:10.307+02:00  INFO 12664 --- [vehicle_SB_JPA] [RMI TCP Connection(84)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-16T14:15:10.309+02:00  INFO 12664 --- [vehicle_SB_JPA] [RMI TCP Connection(84)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:15:10.322+02:00  INFO 12664 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:15:10.324+02:00  INFO 12664 --- [vehicle_SB_JPA] [RMI TCP Connection(84)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:15:10.325+02:00  INFO 12664 --- [vehicle_SB_JPA] [RMI TCP Connection(84)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-16T14:15:10.327+02:00  INFO 12664 --- [vehicle_SB_JPA] [RMI TCP Connection(84)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-16T14:23:30.941+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:23:30.943+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:23:30.943+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:23:30.981+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16T14:23:30.982+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16T14:23:31.608+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:23:31.658+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:23:32.066+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:23:32.080+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:23:32.081+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:23:32.122+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1140 ms
+2026-06-16T14:23:32.253+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-16T14:23:32.509+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b718bc3
+2026-06-16T14:23:32.511+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-16T14:23:32.533+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:23:32.575+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-16T14:23:32.936+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:23:33.021+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:23:34.166+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:23:34.230+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:23:34.333+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-16T14:23:34.743+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:23:35.394+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:23:35.403+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 4.773 seconds (process running for 5.365)
+2026-06-16T14:23:35.407+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:23:35.408+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:23:43.724+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:23:43.725+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:23:43.728+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-16T14:23:44.204+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 292 ms
+2026-06-16T14:24:06.582+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-5] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@48ce43ef
+2026-06-16T14:27:17.448+02:00  INFO 19524 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:27:17.452+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:27:17.466+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:27:17.470+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:27:17.473+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-16T14:27:17.480+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-16T14:27:17.564+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:27:17.564+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:27:17.564+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:27:17.824+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:27:17.857+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:27:17.984+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:27:17.986+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:27:17.986+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:27:18.020+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 455 ms
+2026-06-16T14:27:18.063+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-16T14:27:18.122+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1994458c
+2026-06-16T14:27:18.122+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-16T14:27:18.124+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:27:18.164+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:27:18.178+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:27:18.297+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:27:18.306+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:27:18.431+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:27:18.620+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:27:18.625+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 1.078 seconds (process running for 228.586)
+2026-06-16T14:27:18.627+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:27:18.627+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:27:18.629+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:27:22.377+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:27:22.377+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:27:22.380+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-16T14:27:22.436+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@188344fd
+2026-06-16T14:27:43.588+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-3] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:28:59.136+02:00  INFO 19524 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:28:59.137+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:28:59.151+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:28:59.157+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:28:59.158+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-16T14:28:59.161+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-16T14:28:59.243+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:28:59.243+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:28:59.243+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:28:59.381+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:28:59.395+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:28:59.458+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:28:59.459+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:28:59.459+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:28:59.482+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 237 ms
+2026-06-16T14:28:59.510+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-16T14:28:59.551+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@47ebd2e
+2026-06-16T14:28:59.552+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-16T14:28:59.554+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:28:59.578+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:28:59.591+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:28:59.659+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:28:59.664+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:28:59.737+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:28:59.864+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:28:59.867+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.644 seconds (process running for 329.828)
+2026-06-16T14:28:59.868+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:28:59.868+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:28:59.868+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:29:03.116+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:29:03.117+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:29:03.118+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-16T14:29:03.120+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:29:03.147+02:00 ERROR 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed: java.lang.StackOverflowError] with root cause
+
+java.lang.StackOverflowError
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:16) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+	at com.betacom.sb.mapping.VehicleMap.buildVehicleDTO(VehicleMap.java:24) ~[classes/:na]
+	at com.betacom.sb.mapping.CarMap.buildCarDTO(CarMap.java:20) ~[classes/:na]
+
+2026-06-16T14:33:45.859+02:00  INFO 19524 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:33:45.861+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:33:45.876+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:33:45.877+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:33:45.878+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-16T14:33:45.881+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-16T14:33:45.950+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:33:45.950+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:33:45.950+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:33:46.103+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:33:46.118+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:33:46.165+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:33:46.166+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:33:46.166+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:33:46.183+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 231 ms
+2026-06-16T14:33:46.206+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-06-16T14:33:46.246+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@1c056d0c
+2026-06-16T14:33:46.247+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-06-16T14:33:46.249+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:33:46.270+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:33:46.282+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:33:46.341+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:33:46.345+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:33:46.406+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:33:46.492+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:33:46.493+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.56 seconds (process running for 616.455)
+2026-06-16T14:33:46.494+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:33:46.495+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:33:46.495+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:33:51.780+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:33:51.781+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:33:51.783+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-16T14:33:51.786+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:35:40.513+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@7434fe8a
+2026-06-16T14:36:26.528+02:00  INFO 19524 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:36:26.530+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:36:26.545+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:36:26.547+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:36:26.547+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-06-16T14:36:26.550+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-06-16T14:36:26.617+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:36:26.618+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:36:26.618+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:36:26.744+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:36:26.757+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:36:26.804+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:36:26.805+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:36:26.805+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:36:26.823+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 203 ms
+2026-06-16T14:36:26.845+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-06-16T14:36:26.888+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@2f46b3cc
+2026-06-16T14:36:26.888+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-06-16T14:36:26.890+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:36:26.912+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:36:26.925+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:36:26.984+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:36:26.987+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:36:27.052+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:36:27.133+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:36:27.135+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.536 seconds (process running for 777.096)
+2026-06-16T14:36:27.135+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:36:27.136+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:36:27.136+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:36:35.283+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:36:35.284+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:36:35.285+02:00  INFO 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-16T14:36:35.287+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:37:11.014+02:00  INFO 19524 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2026-06-16T14:37:11.017+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:37:11.029+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:37:11.032+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:37:11.033+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-06-16T14:37:11.036+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-06-16T14:37:11.097+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:37:11.097+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:37:11.097+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:37:11.218+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:37:11.233+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:37:11.288+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:37:11.290+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:37:11.290+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:37:11.309+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 210 ms
+2026-06-16T14:37:11.331+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-06-16T14:37:11.372+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@22f81825
+2026-06-16T14:37:11.373+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-06-16T14:37:11.373+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:37:11.395+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:37:11.408+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:37:11.470+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:37:11.474+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:37:11.536+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:37:11.628+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:37:11.630+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.549 seconds (process running for 821.591)
+2026-06-16T14:37:11.631+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:37:11.631+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:37:11.632+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:37:37.730+02:00  INFO 19524 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:37:37.731+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:37:37.745+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:37:37.747+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:37:37.747+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-06-16T14:37:37.750+02:00  INFO 19524 --- [vehicle_SB_JPA] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-06-16T14:37:37.812+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 19524 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:37:37.812+02:00 DEBUG 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:37:37.812+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:37:37.929+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:37:37.943+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:37:37.987+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:37:37.988+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:37:37.988+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:37:38.005+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 191 ms
+2026-06-16T14:37:38.026+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-06-16T14:37:38.068+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@17911eb2
+2026-06-16T14:37:38.068+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-06-16T14:37:38.070+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:37:38.090+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:37:38.101+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:37:38.155+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:37:38.159+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:37:38.222+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:37:38.311+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:37:38.312+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.517 seconds (process running for 848.274)
+2026-06-16T14:37:38.313+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:37:38.313+02:00  WARN 19524 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:37:38.313+02:00  INFO 19524 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:37:48.636+02:00  INFO 19524 --- [vehicle_SB_JPA] [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-16T14:37:48.637+02:00  INFO 19524 --- [vehicle_SB_JPA] [RMI TCP Connection(19)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:37:48.652+02:00  INFO 19524 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:37:48.653+02:00  INFO 19524 --- [vehicle_SB_JPA] [RMI TCP Connection(19)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:37:48.654+02:00  INFO 19524 --- [vehicle_SB_JPA] [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-06-16T14:37:48.657+02:00  INFO 19524 --- [vehicle_SB_JPA] [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-06-16T14:37:50.471+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 14448 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:37:50.473+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:37:50.474+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:37:50.509+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16T14:37:50.511+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16T14:37:51.096+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:37:51.146+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:37:51.526+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:37:51.539+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:37:51.540+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:37:51.580+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1069 ms
+2026-06-16T14:37:51.702+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-16T14:37:51.833+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@53be1831
+2026-06-16T14:37:51.835+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-16T14:37:51.856+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:37:51.904+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-16T14:37:52.251+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:37:52.346+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:37:53.050+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:37:53.076+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:37:53.140+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-16T14:37:53.392+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:37:53.776+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:37:53.782+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 3.63 seconds (process running for 4.223)
+2026-06-16T14:37:53.784+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:37:53.784+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:38:00.655+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:38:00.656+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:38:00.658+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-16T14:38:00.696+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:41:36.745+02:00  INFO 14448 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-06-16T14:41:36.749+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:41:36.764+02:00  INFO 14448 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:41:36.766+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:41:36.770+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-16T14:41:36.779+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-16T14:41:36.866+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 14448 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:41:36.866+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:41:36.867+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:41:37.019+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:41:37.034+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:41:37.096+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:41:37.097+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:41:37.097+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:41:37.118+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 248 ms
+2026-06-16T14:41:37.145+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-16T14:41:37.188+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@2d1f1fa4
+2026-06-16T14:41:37.190+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-16T14:41:37.191+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:41:37.211+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:41:37.224+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:41:37.300+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:41:37.306+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:41:37.378+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:41:37.489+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:41:37.492+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.648 seconds (process running for 227.933)
+2026-06-16T14:41:37.493+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:41:37.493+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:41:37.495+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:41:43.063+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-16T14:41:43.064+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-16T14:41:43.065+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-16T14:41:43.427+02:00  INFO 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 258 ms
+2026-06-16T14:41:57.056+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-5] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:42:59.184+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-7] c.b.sb.services.implementation.CarImpl   : update com.betacom.sb.dto.input.CarReq@4794a7f0
+2026-06-16T14:43:10.755+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-8] c.b.sb.services.implementation.CarImpl   : update com.betacom.sb.dto.input.CarReq@22f8685d
+2026-06-16T14:43:14.748+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [http-nio-8080-exec-10] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-16T14:49:17.129+02:00  INFO 14448 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2026-06-16T14:49:17.131+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:49:17.146+02:00  INFO 14448 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:49:17.149+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:49:17.149+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-16T14:49:17.152+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-16T14:49:17.258+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 14448 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:49:17.258+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:49:17.259+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:49:17.393+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:49:17.405+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:49:17.473+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:49:17.474+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:49:17.475+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:49:17.491+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 230 ms
+2026-06-16T14:49:17.518+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-16T14:49:17.559+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@54cfa30a
+2026-06-16T14:49:17.559+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-16T14:49:17.560+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:49:17.582+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:49:17.595+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:49:17.655+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:49:17.659+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:49:17.737+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:49:17.854+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:49:17.856+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.624 seconds (process running for 688.298)
+2026-06-16T14:49:17.857+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:49:17.857+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:49:17.858+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:50:06.240+02:00  INFO 14448 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:50:06.242+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:50:06.257+02:00  INFO 14448 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:50:06.259+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:50:06.259+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-16T14:50:06.262+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-16T14:50:06.347+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 14448 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-16T14:50:06.348+02:00 DEBUG 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-16T14:50:06.348+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T14:50:06.478+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T14:50:06.492+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-06-16T14:50:06.548+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-16T14:50:06.549+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-16T14:50:06.549+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-16T14:50:06.568+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 219 ms
+2026-06-16T14:50:06.592+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-06-16T14:50:06.749+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@1686bb9
+2026-06-16T14:50:06.749+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-06-16T14:50:06.750+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T14:50:06.770+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T14:50:06.782+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: vehicle_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T14:50:06.842+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T14:50:06.847+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:50:06.916+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T14:50:07.006+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-16T14:50:07.008+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.683 seconds (process running for 737.45)
+2026-06-16T14:50:07.009+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T14:50:07.010+02:00  WARN 14448 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-16T14:50:07.010+02:00  INFO 14448 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-16T14:51:17.303+02:00  INFO 14448 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16T14:51:17.306+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-16T14:51:17.320+02:00  INFO 14448 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-16T14:51:17.321+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T14:51:17.322+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-06-16T14:51:17.327+02:00  INFO 14448 --- [vehicle_SB_JPA] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.

@@ -46,37 +46,37 @@ public class CarImpl implements ICarServices{
 	
 	@Transactional
 	@Override
-	public void create(CarReq carReq, VehicleReq vehicleReq) throws Exception {
-		log.debug("create {}", carReq);
+	public void create(CarReq req) throws Exception {
+		log.debug("create {}", req);
 		Car car = new Car();
-//		if (carReq.getLicensePlate() == null) {
-//			throw new Exception("license plate cannot be null");
-//		}
-		if (repoCar.existsByLicensePlate(carReq.getLicensePlate())) {
+		if (req.getLicensePlate() == null) {
+			throw new Exception("license plate cannot be null");
+		}
+		if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
 			throw new Exception("license plate already present");
 		}
-		car.setLicensePlate(carReq.getLicensePlate());
+		car.setLicensePlate(req.getLicensePlate());
 		
-//		if (carReq.getDisplacementCc() == null) {
-//			throw new Exception("displacement cc cannot be null");
-//		}
-		car.setDisplacementCc(carReq.getDisplacementCc());
+		if (req.getDisplacementCc() == null) {
+			throw new Exception("displacement cc cannot be null");
+		}
+		car.setDisplacementCc(req.getDisplacementCc());
 		
-//		if (carReq.getDoorCount() == null){
-//			throw new Exception("door count cannot be null");
-//		}
-		car.setDoorCount(carReq.getDoorCount());
-		
+		if (req.getDoorCount() == null){
+			throw new Exception("door count cannot be null");
+		}
+		car.setDoorCount(req.getDoorCount());
 		
 		Vehicle vehicle = new Vehicle();
 		
-	    vehicle.setBrand(vehicleReq.getBrand());
-	    vehicle.setModel(vehicleReq.getModel());
-	    vehicle.setColor(vehicleReq.getColor());
-	    vehicle.setWheelCount(vehicleReq.getWheelCount());
-	    vehicle.setProductionYear(vehicleReq.getProductionYear());
-	    vehicle.setFuelType(vehicleReq.getFuelType());
-	    vehicle.setCategory(vehicleReq.getCategory());
+		
+	    vehicle.setBrand(req.getBrand());
+	    vehicle.setModel(req.getModel());
+	    vehicle.setColor(req.getColor());
+	    vehicle.setWheelCount(req.getWheelCount());
+	    vehicle.setProductionYear(req.getProductionYear());
+	    vehicle.setFuelType(req.getFuelType());
+	    vehicle.setCategory(req.getCategory());
 	    vehicle.setVehicleType(VehicleType.CAR);
 	    
 	    car.setVehicle(vehicle);
@@ -89,14 +89,48 @@ public class CarImpl implements ICarServices{
 	@Transactional
 	@Override
 	public void update(CarReq req) throws Exception {
-		// TODO Auto-generated method stub
-		
+	    log.debug("update {}", req);
+
+	    if (req.getId() == null || req.getId() == 0) {
+	        throw new Exception("Car ID is required for update");
+	    }
+
+	    Car car = repoCar.findById(req.getId())
+	            .orElseThrow(() -> new Exception("Car not found with id: " + req.getId()));
+
+	    if (!car.getLicensePlate().equals(req.getLicensePlate())) {
+	        if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
+	            throw new Exception("The new license plate is already present on another car");
+	        }
+	        car.setLicensePlate(req.getLicensePlate());
+	    }
+
+	    car.setDisplacementCc(req.getDisplacementCc());
+	    car.setDoorCount(req.getDoorCount());
+
+	    Vehicle vehicle = car.getVehicle();
+	    if (vehicle == null) {
+	        throw new Exception("Data integrity error: Linked vehicle not found for this car");
+	    }
+
+	    vehicle.setBrand(req.getBrand());
+	    vehicle.setModel(req.getModel());
+	    vehicle.setColor(req.getColor());
+	    vehicle.setWheelCount(req.getWheelCount());
+	    vehicle.setProductionYear(req.getProductionYear());
+	    vehicle.setFuelType(req.getFuelType());
+	    vehicle.setCategory(req.getCategory());
+
+	    repoCar.save(car);
 	}
 
 	@Transactional
 	@Override
 	public void delete(Long id) throws Exception {
-		// TODO Auto-generated method stub
+		log.debug("delete {}", id);
+		Car car = repoCar.findById(id)
+				.orElseThrow(() -> new Exception("id not valid"));
 		
+		repoCar.delete(car);
 	}
 }
