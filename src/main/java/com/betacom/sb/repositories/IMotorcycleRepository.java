@@ -8,4 +8,5 @@ import com.betacom.sb.models.Motorcycle;
 @Repository
 public interface IMotorcycleRepository extends JpaRepository<Motorcycle, Long> {
 
+	Boolean existsByLicensePlate(String licensePlate);
 }
