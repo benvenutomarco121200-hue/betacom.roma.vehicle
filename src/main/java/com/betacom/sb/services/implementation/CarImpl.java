@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.CarReq;
+import com.betacom.sb.dto.input.VehicleReq;
 import com.betacom.sb.dto.output.CarDTO;
+import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.CarMap;
 import com.betacom.sb.models.Car;
 import com.betacom.sb.models.Vehicle;
@@ -44,34 +46,43 @@ public class CarImpl implements ICarServices{
 	
 	@Transactional
 	@Override
-	public void create(CarReq req) throws Exception {
-		log.debug("create {}", req);
+	public void create(CarReq carReq, VehicleReq vehicleReq) throws Exception {
+		log.debug("create {}", carReq);
 		Car car = new Car();
-		if (req.getLicensePlate() == null) {
-			throw new Exception("license plate cannot be null");
-		}
-		if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
+//		if (carReq.getLicensePlate() == null) {
+//			throw new Exception("license plate cannot be null");
+//		}
+		if (repoCar.existsByLicensePlate(carReq.getLicensePlate())) {
 			throw new Exception("license plate already present");
 		}
-		car.setLicensePlate(req.getLicensePlate());
+		car.setLicensePlate(carReq.getLicensePlate());
 		
-		if (req.getDisplacementCc() == null) {
-			throw new Exception("displacement cc cannot be null");
-		}
-		car.setDisplacementCc(req.getDisplacementCc());
+//		if (carReq.getDisplacementCc() == null) {
+//			throw new Exception("displacement cc cannot be null");
+//		}
+		car.setDisplacementCc(carReq.getDisplacementCc());
 		
-		if (req.getDoorCount() == null){
-			throw new Exception("door count cannot be null");
-		}
-		car.setDoorCount(req.getDoorCount());
-		
-		
-		
-//		repoVehicle.save
-//		Vehicle vehicle = repoVehicle.findById(req.getVehicleId())
-//				.orElseThrow(() -> new Exception("vehicle not found"));
+//		if (carReq.getDoorCount() == null){
+//			throw new Exception("door count cannot be null");
+//		}
+		car.setDoorCount(carReq.getDoorCount());
 		
 		
+		Vehicle vehicle = new Vehicle();
+		
+	    vehicle.setBrand(vehicleReq.getBrand());
+	    vehicle.setModel(vehicleReq.getModel());
+	    vehicle.setColor(vehicleReq.getColor());
+	    vehicle.setWheelCount(vehicleReq.getWheelCount());
+	    vehicle.setProductionYear(vehicleReq.getProductionYear());
+	    vehicle.setFuelType(vehicleReq.getFuelType());
+	    vehicle.setCategory(vehicleReq.getCategory());
+	    vehicle.setVehicleType(VehicleType.CAR);
+	    
+	    car.setVehicle(vehicle);
+	    vehicle.setCar(car);
+		
+	    repoVehicle.save(vehicle);
 		repoCar.save(car);
 	}
 	
