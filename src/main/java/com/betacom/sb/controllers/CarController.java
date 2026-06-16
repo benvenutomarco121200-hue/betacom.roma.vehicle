@@ -3,6 +3,7 @@ package com.betacom.sb.controllers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -62,6 +63,32 @@ public class CarController {
 			r.setMsg("deleted");
 		} catch (Exception e) {
 			r.setMsg(e.getMessage());
+			status = HttpStatus.BAD_REQUEST;
+		}
+		return ResponseEntity.status(status).body(r);
+	}
+	
+	@GetMapping("/list")
+	public ResponseEntity<Object> list() throws Exception{
+		Object r = new Object();
+		HttpStatus status = HttpStatus.OK;
+		try {
+			r = servCar.list();
+		} catch (Exception e) {
+			r = e.getMessage();
+			status = HttpStatus.BAD_REQUEST;
+		}
+		return ResponseEntity.status(status).body(r);
+	}
+	
+	@GetMapping("/getById")
+	public ResponseEntity<Object> getById(@RequestParam(required = true) Long id) throws Exception{
+		Object r = new Object();
+		HttpStatus status = HttpStatus.OK;
+		try {
+			r = servCar.getById(id);
+		} catch (Exception e) {
+			r = e.getMessage();
 			status = HttpStatus.BAD_REQUEST;
 		}
 		return ResponseEntity.status(status).body(r);
