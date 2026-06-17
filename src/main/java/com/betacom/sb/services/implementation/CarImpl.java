@@ -11,6 +11,7 @@ import com.betacom.sb.mapping.CarMap;
 import com.betacom.sb.models.Car;
 import com.betacom.sb.models.Vehicle;
 import com.betacom.sb.repositories.ICarRepository;
+import com.betacom.sb.repositories.IMotorcycleRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.ICarServices;
 import com.betacom.sb.utils.Utils;
@@ -27,6 +28,7 @@ public class CarImpl implements ICarServices{
 
 	private final ICarRepository repoCar;
 	private final IVehicleRepository repoVehicle;
+	private final IMotorcycleRepository repoMoto;
 
 	@Override
 	public CarDTO getById(Long id) throws Exception {
@@ -52,7 +54,7 @@ public class CarImpl implements ICarServices{
 		if (req.getLicensePlate() == null) {
 			throw new BetacomRomaException("license plate cannot be null");
 		}
-		if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
+		if (repoCar.existsByLicensePlate(req.getLicensePlate()) || repoMoto.existsByLicensePlate(req.getLicensePlate())) {
 			throw new BetacomRomaException("license plate already present");
 		}
 		car.setLicensePlate(req.getLicensePlate());
@@ -88,13 +90,21 @@ public class CarImpl implements ICarServices{
 	    Car car = repoCar.findById(req.getId())
 	            .orElseThrow(() -> new BetacomRomaException("Car not found with id: " + req.getId()));
 
+	    if (req.getLicensePlate() != null && !req.getLicensePlate().equalsIgnoreCase(car.getLicensePlate())) {
+			if (repoCar.existsByLicensePlate(req.getLicensePlate()) || repoMoto.existsByLicensePlate(req.getLicensePlate()))
+				throw new BetacomRomaException("The new license plate is already present on another car");
+			Optional.ofNullable(req.getLicensePlate()).ifPresent(car::setLicensePlate);
+		}
+	    
+	    /*
 	    if (!car.getLicensePlate().equals(req.getLicensePlate())) {
 	        if (repoCar.existsByLicensePlate(req.getLicensePlate())) {
 	            throw new BetacomRomaException("The new license plate is already present on another car");
 	        }
 	        Optional.ofNullable(req.getLicensePlate()).ifPresent(car::setLicensePlate);
 	    }
-
+		*/
+	    
 	    Optional.ofNullable(req.getDisplacementCc()).ifPresent(car::setDisplacementCc);
 	    Optional.ofNullable(req.getDoorCount()).ifPresent(car::setDoorCount);
 
