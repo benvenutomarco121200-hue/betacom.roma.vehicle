@@ -10,6 +10,7 @@ import com.betacom.sb.dto.output.MotorcycleDTO;
 import com.betacom.sb.mapping.MotorcycleMap;
 import com.betacom.sb.models.Motorcycle;
 import com.betacom.sb.models.Vehicle;
+import com.betacom.sb.repositories.ICarRepository;
 import com.betacom.sb.repositories.IMotorcycleRepository;
 import com.betacom.sb.repositories.IVehicleRepository;
 import com.betacom.sb.services.interfaces.IMotorcycleServices;
@@ -27,6 +28,7 @@ public class MotorcycleImpl implements IMotorcycleServices{
 
 	private final IMotorcycleRepository repoMoto;
 	private final IVehicleRepository repoVehicle;
+	private final ICarRepository repoCar;
 	
 	@Transactional
 	@Override
@@ -36,7 +38,7 @@ public class MotorcycleImpl implements IMotorcycleServices{
 		if (req.getLicensePlate() == null) {
 			throw new BetacomRomaException("license plate cannot be null");
 		}
-		if (repoMoto.existsByLicensePlate(req.getLicensePlate())) {
+		if (repoMoto.existsByLicensePlate(req.getLicensePlate()) || repoCar.existsByLicensePlate(req.getLicensePlate())) {
 			throw new BetacomRomaException("license plate already present");
 		}
 		moto.setLicensePlate(req.getLicensePlate());
@@ -68,12 +70,19 @@ public class MotorcycleImpl implements IMotorcycleServices{
 	    Motorcycle moto= repoMoto.findById(req.getId())
 	            .orElseThrow(() -> new BetacomRomaException("Motorcycle not found with id: " + req.getId()));
 
+	    if (req.getLicensePlate() != null && !req.getLicensePlate().equalsIgnoreCase(moto.getLicensePlate())) {
+			if (repoCar.existsByLicensePlate(req.getLicensePlate()) || repoMoto.existsByLicensePlate(req.getLicensePlate()))
+				throw new BetacomRomaException("The new license plate is already present on another motorcycle");
+			Optional.ofNullable(req.getLicensePlate()).ifPresent(moto::setLicensePlate);
+		}
+	    /*
 	    if (!moto.getLicensePlate().equals(req.getLicensePlate())) {
 	        if (repoMoto.existsByLicensePlate(req.getLicensePlate())) {
 	            throw new BetacomRomaException("The new license plate is already present on another motorcycle");
 	        }
 	        Optional.ofNullable(req.getLicensePlate()).ifPresent(moto::setLicensePlate);
 	    }
+	    */
 
 	    Optional.ofNullable(req.getDisplacementCc()).ifPresent(moto::setDisplacementCc);
 	    
