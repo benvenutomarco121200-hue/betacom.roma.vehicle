@@ -2,6 +2,7 @@ package com.betacom.sb.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.sb.dto.input.CarReq;
+import com.betacom.sb.dto.input.ValidationGroups;
 import com.betacom.sb.dto.output.ResponseDTO;
 import com.betacom.sb.services.interfaces.ICarServices;
 
@@ -27,7 +29,7 @@ public class CarController {
 	private final ICarServices servCar;
 	
 	@PostMapping("/create")
-	public ResponseEntity<ResponseDTO> create(@RequestBody(required = true) CarReq req) throws Exception{
+	public ResponseEntity<ResponseDTO> create(@RequestBody(required = true) @Validated(ValidationGroups.Create.class) CarReq req) throws Exception{
 		ResponseDTO r = new ResponseDTO();
 		HttpStatus status = HttpStatus.OK;
 		try {
@@ -41,7 +43,7 @@ public class CarController {
 	}
 	
 	@PatchMapping("/update")
-	public ResponseEntity<ResponseDTO> update(@RequestBody(required = true) CarReq req) throws Exception{
+	public ResponseEntity<ResponseDTO> update(@RequestBody(required = true) @Validated(ValidationGroups.Update.class) CarReq req) throws Exception{
 		ResponseDTO r = new ResponseDTO();
 		HttpStatus status = HttpStatus.OK;
 		try {

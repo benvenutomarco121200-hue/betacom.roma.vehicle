@@ -1,447 +1,339 @@
-2026-06-17T09:47:57.645+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 25.0.2 with PID 19980 (C:\Users\utente\Programmazione\Java\Accademia\Condiviso\betacom.roma.vehicle\target\classes started by Lorenzo in C:\Users\utente\Programmazione\Java\Accademia\Condiviso\betacom.roma.vehicle)
-2026-06-17T09:47:57.648+02:00 DEBUG 19980 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T09:47:57.648+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T09:47:57.674+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-17T09:47:57.674+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-17T09:47:58.138+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T09:47:58.173+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
-2026-06-17T09:47:58.423+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T09:47:58.432+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T09:47:58.432+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T09:47:58.457+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 783 ms
-2026-06-17T09:47:58.492+02:00  WARN 19980 --- [vehicle_SB_JPA] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'inMemoryDatabaseShutdownExecutor' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-2026-06-17T09:47:58.493+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-06-17T09:47:58.503+02:00  INFO 19980 --- [vehicle_SB_JPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-06-17T09:47:58.510+02:00 ERROR 19980 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'inMemoryDatabaseShutdownExecutor' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
-	at com.betacom.sb.VehicleSbJpaApplication.main(VehicleSbJpaApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 23 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 37 common frames omitted
-Caused by: java.lang.IllegalArgumentException: 'url' must start with "jdbc"
-	at org.springframework.util.Assert.isTrue(Assert.java:117) ~[spring-core-7.0.8.jar:7.0.8]
-	at org.springframework.boot.jdbc.DatabaseDriver.fromJdbcUrl(DatabaseDriver.java:316) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
-	at org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.findDriverClassName(DataSourceProperties.java:193) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
-	at org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:177) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
-	at org.springframework.boot.jdbc.autoconfigure.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:51) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
-	at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:63) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
-	at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:128) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 40 common frames omitted
-
-2026-06-17T09:48:33.351+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 25.0.2 with PID 20308 (C:\Users\utente\Programmazione\Java\Accademia\Condiviso\betacom.roma.vehicle\target\classes started by Lorenzo in C:\Users\utente\Programmazione\Java\Accademia\Condiviso\betacom.roma.vehicle)
-2026-06-17T09:48:33.352+02:00 DEBUG 20308 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T09:48:33.353+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T09:48:33.374+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-17T09:48:33.375+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-17T09:48:33.729+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T09:48:33.765+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
-2026-06-17T09:48:33.971+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T09:48:33.979+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T09:48:33.979+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T09:48:34.001+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 626 ms
-2026-06-17T09:48:34.083+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-17T09:48:34.219+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a924009
-2026-06-17T09:48:34.220+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-17T09:48:34.238+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T09:48:34.287+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-06-17T09:48:34.554+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T09:48:34.670+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa]
+2026-06-18T12:04:11.676+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:04:11.680+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:04:11.683+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:04:11.724+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-18T12:04:11.724+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-18T12:04:12.413+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:04:12.473+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:04:12.922+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:04:12.940+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:04:12.941+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:04:12.983+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1259 ms
+2026-06-18T12:04:13.122+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T12:04:13.290+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@dc4142a
+2026-06-18T12:04:13.291+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T12:04:13.321+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:04:13.385+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T12:04:13.799+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:04:13.926+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: db_jpa/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T09:48:35.245+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T09:48:35.263+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T09:48:35.309+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-17T09:48:35.605+02:00  WARN 20308 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T09:48:35.925+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T09:48:35.927+02:00  INFO 20308 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 2.762 seconds (process running for 3.066)
-2026-06-17T09:48:35.929+02:00  WARN 20308 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T09:48:35.929+02:00  WARN 20308 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T11:06:59.566+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 28800 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T11:06:59.570+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T11:06:59.571+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T11:06:59.616+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-17T11:06:59.616+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-17T11:07:00.341+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T11:07:00.396+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
-2026-06-17T11:07:00.848+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T11:07:00.863+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T11:07:00.863+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T11:07:00.920+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1304 ms
-2026-06-17T11:07:01.075+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-17T11:07:01.265+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ecae82e
-2026-06-17T11:07:01.266+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-17T11:07:01.303+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T11:07:01.406+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-06-17T11:07:01.940+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T11:07:02.069+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:04:14.770+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:04:14.799+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:04:14.870+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T12:04:15.204+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:04:15.618+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:04:15.622+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 4.268 seconds (process running for 4.994)
+2026-06-18T12:04:15.627+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:04:15.627+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:04:20.807+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T12:04:20.807+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T12:04:20.809+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-18T12:04:21.659+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 448 ms
+2026-06-18T12:04:32.323+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-9] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-18T12:04:51.282+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-10] c.b.sb.services.implementation.CarImpl   : list
+2026-06-18T12:07:56.190+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-18T12:07:56.197+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:07:56.213+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:07:56.217+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:07:56.220+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T12:07:56.224+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T12:07:56.341+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:07:56.342+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:07:56.342+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:07:56.528+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:07:56.547+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:07:56.616+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:07:56.616+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:07:56.616+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:07:56.639+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 295 ms
+2026-06-18T12:07:56.676+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-18T12:07:56.733+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5daeac63
+2026-06-18T12:07:56.733+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-18T12:07:56.735+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:07:56.756+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:07:56.771+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T11:07:03.261+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T11:07:03.293+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T11:07:03.373+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-17T11:07:03.734+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T11:07:04.184+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T11:07:04.190+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 5.004 seconds (process running for 5.702)
-2026-06-17T11:07:04.192+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T11:07:04.192+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T11:08:53.172+02:00  INFO 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-17T11:08:53.172+02:00  INFO 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-17T11:08:53.173+02:00  INFO 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-17T11:08:53.954+02:00  INFO 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 277 ms
-2026-06-17T11:15:34.323+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] c.b.s.s.implementation.MotorcycleImpl    : create com.betacom.sb.dto.input.MotorcycleReq@19401735
-2026-06-17T11:16:36.199+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-8] c.b.s.s.implementation.MotorcycleImpl    : create com.betacom.sb.dto.input.MotorcycleReq@7a6f4921
-2026-06-17T11:17:18.711+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-7] c.b.s.s.implementation.MotorcycleImpl    : create com.betacom.sb.dto.input.MotorcycleReq@14a142c5
-2026-06-17T11:17:34.918+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-9] c.b.s.s.implementation.MotorcycleImpl    : create com.betacom.sb.dto.input.MotorcycleReq@7d9aea77
-2026-06-17T11:20:27.629+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@20612147
-2026-06-17T11:20:30.268+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-2] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@3270eb41
-2026-06-17T11:21:19.640+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-10] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@18fd57cd
-2026-06-17T11:21:46.724+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-5] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@1e9cca7d
-2026-06-17T11:21:50.763+02:00  WARN 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.betacom.sb.enums.FuelType` from String "wcjygrhbf": not one of the values accepted for Enum class: [PETROL, LPG, NONE, DIESEL, HYBRID, ELECTRIC]]
-2026-06-17T11:35:23.742+02:00  WARN 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot coerce empty String ("") to `com.betacom.sb.enums.FuelType` value (but could if coercion was enabled using `CoercionConfig`)]
-2026-06-17T11:35:56.855+02:00  WARN 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start property name]
-2026-06-17T11:36:07.878+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-8] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@7c8628d4
-2026-06-17T11:36:20.285+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-7] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@4daec22b
-2026-06-17T11:43:59.426+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-9] c.b.s.s.implementation.BicycleImpl       : create com.betacom.sb.dto.input.BicycleReq@206ee8a2
-2026-06-17T11:44:03.534+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.s.s.implementation.BicycleImpl       : create com.betacom.sb.dto.input.BicycleReq@2f631d63
-2026-06-17T11:44:30.501+02:00  WARN 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.betacom.sb.enums.BrakeType` from String "DISK": not one of the values accepted for Enum class: [DISC, DRUM]]
-2026-06-17T11:44:44.227+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [http-nio-8080-exec-10] c.b.s.s.implementation.BicycleImpl       : create com.betacom.sb.dto.input.BicycleReq@669a1725
-2026-06-17T12:05:25.368+02:00  INFO 28800 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-06-17T12:05:25.376+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T12:05:25.386+02:00  INFO 28800 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T12:05:25.392+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T12:05:25.400+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-17T12:05:25.403+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-17T12:05:25.596+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 28800 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T12:05:25.596+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T12:05:25.596+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T12:05:25.792+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T12:05:25.815+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
-2026-06-17T12:05:25.902+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T12:05:25.903+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T12:05:25.903+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T12:05:25.932+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 332 ms
-2026-06-17T12:05:25.968+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-06-17T12:05:26.021+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@20cf4a89
-2026-06-17T12:05:26.021+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-06-17T12:05:26.023+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T12:05:26.059+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T12:05:26.076+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:07:56.848+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:07:56.854+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:07:56.945+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:07:57.041+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:07:57.044+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.729 seconds (process running for 226.415)
+2026-06-18T12:07:57.045+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:07:57.045+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:07:57.046+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:13:48.611+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 18 class path changes (2 additions, 0 deletions, 16 modifications)
+2026-06-18T12:13:48.613+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:13:48.629+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:13:48.635+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:13:48.636+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-18T12:13:48.649+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-18T12:13:48.735+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:13:48.735+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:13:48.735+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:13:48.896+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:13:48.913+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:13:48.992+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:13:48.994+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:13:48.995+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:13:49.017+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 279 ms
+2026-06-18T12:13:49.053+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-18T12:13:49.103+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@cc13506
+2026-06-18T12:13:49.104+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-18T12:13:49.105+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:13:49.133+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:13:49.148+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T12:05:26.183+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T12:05:26.188+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T12:05:26.316+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T12:05:26.474+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T12:05:26.478+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.907 seconds (process running for 3507.989)
-2026-06-17T12:05:26.478+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T12:05:26.479+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T12:05:26.480+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-06-17T12:16:02.145+02:00  INFO 28800 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-06-17T12:16:02.146+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T12:16:02.155+02:00  INFO 28800 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T12:16:02.158+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T12:16:02.160+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2026-06-17T12:16:02.162+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2026-06-17T12:16:02.266+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 28800 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T12:16:02.268+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T12:16:02.268+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T12:16:02.473+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T12:16:02.492+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
-2026-06-17T12:16:02.589+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T12:16:02.590+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T12:16:02.591+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T12:16:02.618+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 347 ms
-2026-06-17T12:16:02.653+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2026-06-17T12:16:02.710+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@24119622
-2026-06-17T12:16:02.711+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2026-06-17T12:16:02.712+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T12:16:02.750+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T12:16:02.766+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:13:49.236+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:13:49.242+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:13:49.356+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:13:49.475+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:13:49.477+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.765 seconds (process running for 578.849)
+2026-06-18T12:13:49.478+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:13:49.478+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:13:49.479+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:20:46.839+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2026-06-18T12:20:46.841+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:20:46.855+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:20:46.858+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:20:46.859+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-18T12:20:46.863+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-18T12:20:46.959+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:20:46.959+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:20:46.959+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:20:47.142+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:20:47.163+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:20:47.251+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:20:47.252+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:20:47.252+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:20:47.275+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 312 ms
+2026-06-18T12:20:47.308+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-06-18T12:20:47.362+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@46f422c1
+2026-06-18T12:20:47.363+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-06-18T12:20:47.365+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:20:47.394+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:20:47.410+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T12:16:02.879+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T12:16:02.884+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T12:16:03.008+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T12:16:03.163+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T12:16:03.165+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.923 seconds (process running for 4144.677)
-2026-06-17T12:16:03.166+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T12:16:03.166+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T12:16:03.166+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-06-17T13:51:07.875+02:00  INFO 28800 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-06-17T13:51:07.880+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T13:51:07.889+02:00  INFO 28800 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T13:51:07.891+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:51:07.893+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2026-06-17T13:51:07.894+02:00  INFO 28800 --- [vehicle_SB_JPA] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2026-06-17T13:51:08.020+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 28800 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T13:51:08.021+02:00 DEBUG 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T13:51:08.021+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T13:51:08.210+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T13:51:08.230+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
-2026-06-17T13:51:08.303+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T13:51:08.304+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T13:51:08.305+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T13:51:08.331+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 308 ms
-2026-06-17T13:51:08.368+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2026-06-17T13:51:08.423+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@21345501
-2026-06-17T13:51:08.423+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2026-06-17T13:51:08.424+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T13:51:08.459+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T13:51:08.476+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:20:47.482+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:20:47.488+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:20:47.595+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:20:47.718+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:20:47.721+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.787 seconds (process running for 997.092)
+2026-06-18T12:20:47.722+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:20:47.722+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:20:47.723+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:34:36.709+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-18T12:34:36.711+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:34:36.724+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:34:36.727+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:34:36.729+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-06-18T12:34:36.734+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-06-18T12:34:36.818+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:34:36.818+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:34:36.819+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:34:36.971+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:34:36.986+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:34:37.059+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:34:37.061+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:34:37.062+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:34:37.082+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 261 ms
+2026-06-18T12:34:37.118+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-06-18T12:34:37.163+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@4f61d4d2
+2026-06-18T12:34:37.163+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-06-18T12:34:37.165+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:34:37.190+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:34:37.205+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T13:51:08.574+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T13:51:08.582+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:51:08.695+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T13:51:08.839+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T13:51:08.841+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.848 seconds (process running for 9850.353)
-2026-06-17T13:51:08.842+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T13:51:08.842+02:00  WARN 28800 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T13:51:08.842+02:00  INFO 28800 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-06-17T13:51:36.963+02:00  INFO 28800 --- [vehicle_SB_JPA] [RMI TCP Connection(168)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2026-06-17T13:51:36.964+02:00  INFO 28800 --- [vehicle_SB_JPA] [RMI TCP Connection(168)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T13:51:36.972+02:00  INFO 28800 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T13:51:36.973+02:00  INFO 28800 --- [vehicle_SB_JPA] [RMI TCP Connection(168)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:51:36.974+02:00  INFO 28800 --- [vehicle_SB_JPA] [RMI TCP Connection(168)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2026-06-17T13:51:36.980+02:00  INFO 28800 --- [vehicle_SB_JPA] [RMI TCP Connection(168)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2026-06-17T13:51:42.446+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 31320 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T13:51:42.450+02:00 DEBUG 31320 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T13:51:42.451+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T13:51:42.496+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-17T13:51:42.497+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-17T13:51:43.218+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T13:51:43.276+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
-2026-06-17T13:51:43.699+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T13:51:43.716+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T13:51:43.716+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T13:51:43.772+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1275 ms
-2026-06-17T13:51:43.926+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-17T13:51:44.096+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16406b
-2026-06-17T13:51:44.098+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-17T13:51:44.126+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T13:51:44.188+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-06-17T13:51:44.664+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T13:51:44.755+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:34:37.273+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:34:37.278+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:34:37.378+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:34:37.499+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:34:37.502+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.705 seconds (process running for 1826.873)
+2026-06-18T12:34:37.503+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:34:37.503+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:34:37.504+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:36:07.272+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-18T12:36:07.273+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:36:07.286+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:36:07.289+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:36:07.291+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-06-18T12:36:07.295+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-06-18T12:36:07.366+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:36:07.366+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:36:07.366+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:36:07.518+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:36:07.534+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:36:07.608+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:36:07.610+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:36:07.610+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:36:07.630+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 262 ms
+2026-06-18T12:36:07.670+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-06-18T12:36:07.716+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@693339b0
+2026-06-18T12:36:07.717+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-06-18T12:36:07.719+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:36:07.747+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:36:07.762+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T13:51:45.663+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T13:51:45.693+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:51:45.768+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-17T13:51:46.116+02:00  WARN 31320 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T13:51:46.549+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T13:51:46.554+02:00  INFO 31320 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 4.489 seconds (process running for 5.183)
-2026-06-17T13:51:46.558+02:00  WARN 31320 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T13:51:46.558+02:00  WARN 31320 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T13:51:58.446+02:00  INFO 31320 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-17T13:51:58.448+02:00  INFO 31320 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-17T13:51:58.449+02:00  INFO 31320 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-17T13:51:58.930+02:00  INFO 31320 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 256 ms
-2026-06-17T13:52:26.142+02:00  WARN 31320 --- [vehicle_SB_JPA] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.betacom.sb.enums.FuelType` from String "dbrht": not one of the values accepted for Enum class: [PETROL, LPG, NONE, DIESEL, HYBRID, ELECTRIC]]
-2026-06-17T13:55:29.136+02:00  INFO 31320 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2026-06-17T13:55:29.140+02:00  INFO 31320 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T13:55:29.148+02:00  INFO 31320 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T13:55:29.153+02:00  INFO 31320 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:55:29.158+02:00  INFO 31320 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-17T13:55:29.161+02:00  INFO 31320 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-17T13:55:32.879+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 35124 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T13:55:32.882+02:00 DEBUG 35124 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T13:55:32.882+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T13:55:32.929+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-17T13:55:32.930+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-17T13:55:33.632+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T13:55:33.689+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
-2026-06-17T13:55:34.105+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T13:55:34.120+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T13:55:34.121+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T13:55:34.169+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1239 ms
-2026-06-17T13:55:34.311+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-17T13:55:34.471+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fffbb9
-2026-06-17T13:55:34.472+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-17T13:55:34.501+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T13:55:34.559+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-06-17T13:55:35.006+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T13:55:35.102+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:36:07.828+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:36:07.835+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:36:07.940+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:36:08.071+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:36:08.073+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.732 seconds (process running for 1917.445)
+2026-06-18T12:36:08.074+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:36:08.075+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:36:08.075+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:38:19.876+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-18T12:38:19.878+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:38:19.892+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:38:19.894+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:38:19.895+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-06-18T12:38:19.901+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-06-18T12:38:19.972+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:38:19.972+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:38:19.973+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:38:20.108+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:38:20.124+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:38:20.181+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:38:20.182+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:38:20.182+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:38:20.209+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 234 ms
+2026-06-18T12:38:20.237+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-06-18T12:38:20.283+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@65dc5650
+2026-06-18T12:38:20.284+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-06-18T12:38:20.285+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:38:20.313+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:38:20.328+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T13:55:36.022+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T13:55:36.052+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:55:36.132+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-17T13:55:36.484+02:00  WARN 35124 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T13:55:36.929+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T13:55:36.934+02:00  INFO 35124 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 4.435 seconds (process running for 5.122)
-2026-06-17T13:55:36.936+02:00  WARN 35124 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T13:55:36.938+02:00  WARN 35124 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T13:55:49.199+02:00  INFO 35124 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-17T13:55:49.199+02:00  INFO 35124 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-17T13:55:49.200+02:00  INFO 35124 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-17T13:55:49.682+02:00  INFO 35124 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 266 ms
-2026-06-17T13:55:54.196+02:00  WARN 35124 --- [vehicle_SB_JPA] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.betacom.sb.enums.FuelType` from String "dbrht": not one of the values accepted for Enum class: [PETROL, LPG, NONE, DIESEL, HYBRID, ELECTRIC]]
-2026-06-17T13:58:35.464+02:00  INFO 35124 --- [vehicle_SB_JPA] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2026-06-17T13:58:35.468+02:00  INFO 35124 --- [vehicle_SB_JPA] [RMI TCP Connection(5)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T13:58:35.476+02:00  INFO 35124 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T13:58:35.480+02:00  INFO 35124 --- [vehicle_SB_JPA] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T13:58:35.483+02:00  INFO 35124 --- [vehicle_SB_JPA] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-17T13:58:35.485+02:00  INFO 35124 --- [vehicle_SB_JPA] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-17T14:07:52.867+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.4 with PID 35036 (C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle\target\classes started by alexa in C:\Users\alexa\eclipse-workspace\betacom.roma.vehicle)
-2026-06-17T14:07:52.870+02:00 DEBUG 35036 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-06-17T14:07:52.871+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-06-17T14:07:52.915+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-17T14:07:52.915+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-17T14:07:53.632+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-17T14:07:53.692+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
-2026-06-17T14:07:54.118+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-06-17T14:07:54.132+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-17T14:07:54.132+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-17T14:07:54.183+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1268 ms
-2026-06-17T14:07:54.325+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-17T14:07:54.597+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5e5d2fca
-2026-06-17T14:07:54.598+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-17T14:07:54.625+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-17T14:07:54.684+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-06-17T14:07:55.133+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-17T14:07:55.225+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/VeicoliDB_JPA]
+2026-06-18T12:38:20.391+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:38:20.398+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:38:20.487+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:38:20.575+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:38:20.577+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 0.627 seconds (process running for 2049.948)
+2026-06-18T12:38:20.578+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:38:20.578+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:38:20.579+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:47:02.001+02:00  INFO 9516 --- [vehicle_SB_JPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+2026-06-18T12:47:02.003+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-25] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:47:02.018+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:47:02.024+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:47:02.026+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-06-18T12:47:02.037+02:00  INFO 9516 --- [vehicle_SB_JPA] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-06-18T12:47:02.123+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Starting VehicleSbJpaApplication using Java 21.0.10 with PID 9516 (C:\Java\workspace\vehicle_SB_JPA\target\classes started by marco in C:\Java\workspace\vehicle_SB_JPA)
+2026-06-18T12:47:02.123+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-18T12:47:02.123+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T12:47:02.286+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T12:47:02.308+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2026-06-18T12:47:02.422+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T12:47:02.424+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T12:47:02.424+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T12:47:02.451+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 323 ms
+2026-06-18T12:47:02.516+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-06-18T12:47:02.572+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@66953997
+2026-06-18T12:47:02.573+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-06-18T12:47:02.574+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T12:47:02.612+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T12:47:02.626+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/vehicle_db]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 18.4
-	Default catalog/schema: VeicoliDB_JPA/public
+	Default catalog/schema: vehicle_db/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-17T14:07:56.152+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-17T14:07:56.181+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T14:07:56.255+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-17T14:07:56.617+02:00  WARN 35036 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-17T14:07:57.060+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-06-17T14:07:57.071+02:00  INFO 35036 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 4.58 seconds (process running for 5.274)
-2026-06-17T14:07:57.075+02:00  WARN 35036 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-06-17T14:07:57.076+02:00  WARN 35036 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-06-17T14:08:08.000+02:00  INFO 35036 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-17T14:08:08.001+02:00  INFO 35036 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-17T14:08:08.002+02:00  INFO 35036 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-17T14:08:08.465+02:00  INFO 35036 --- [vehicle_SB_JPA] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 253 ms
-2026-06-17T14:08:12.611+02:00  WARN 35036 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.betacom.sb.enums.FuelType`, problem: The value 'dbrht' is not a valid FuelType. Accepted values: [LPG, DIESEL, PETROL, HYBRID, ELECTRIC, NONE]]
-2026-06-17T14:11:08.742+02:00  INFO 35036 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2026-06-17T14:11:08.746+02:00  INFO 35036 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-17T14:11:08.757+02:00  INFO 35036 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-06-17T14:11:08.760+02:00  INFO 35036 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-17T14:11:08.762+02:00  INFO 35036 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-17T14:11:08.765+02:00  INFO 35036 --- [vehicle_SB_JPA] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T12:47:02.747+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T12:47:02.754+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:47:03.455+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T12:47:03.685+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T12:47:03.692+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] com.betacom.sb.VehicleSbJpaApplication   : Started VehicleSbJpaApplication in 1.597 seconds (process running for 2573.064)
+2026-06-18T12:47:03.696+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T12:47:03.697+02:00  WARN 9516 --- [vehicle_SB_JPA] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T12:47:03.698+02:00  INFO 9516 --- [vehicle_SB_JPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-18T12:47:05.458+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T12:47:05.459+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T12:47:05.462+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-18T12:47:05.887+02:00  INFO 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 220 ms
+2026-06-18T12:47:28.950+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-6] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-18T12:47:51.684+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-7] c.b.s.s.implementation.VehicleImpl       : select by color
+2026-06-18T12:47:53.421+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-8] c.b.s.s.implementation.VehicleImpl       : select by color
+2026-06-18T12:47:59.475+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-9] c.b.s.s.implementation.VehicleImpl       : select by color
+2026-06-18T12:48:11.192+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-1] c.b.s.s.implementation.VehicleImpl       : select by color
+2026-06-18T12:48:16.377+02:00 DEBUG 9516 --- [vehicle_SB_JPA] [http-nio-8080-exec-2] c.b.s.s.implementation.VehicleImpl       : select by color
+2026-06-18T12:49:46.980+02:00  INFO 9516 --- [vehicle_SB_JPA] [RMI TCP Connection(50)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T12:49:46.981+02:00  INFO 9516 --- [vehicle_SB_JPA] [RMI TCP Connection(50)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T12:49:46.995+02:00  INFO 9516 --- [vehicle_SB_JPA] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T12:49:46.997+02:00  INFO 9516 --- [vehicle_SB_JPA] [RMI TCP Connection(50)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T12:49:46.998+02:00  INFO 9516 --- [vehicle_SB_JPA] [RMI TCP Connection(50)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-06-18T12:49:47.001+02:00  INFO 9516 --- [vehicle_SB_JPA] [RMI TCP Connection(50)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.

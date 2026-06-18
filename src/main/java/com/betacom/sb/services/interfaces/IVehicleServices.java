@@ -10,4 +10,6 @@ import com.betacom.sb.dto.output.VehicleDTO;
 public interface IVehicleServices {
 	VehicleDTO getById(Long id) throws Exception;
 	List<VehicleDTO> list() throws Exception;
+	
+	List<VehicleDTO> selectByColor(String color) throws Exception;
 }

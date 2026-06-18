@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.MotorcycleReq;
 import com.betacom.sb.dto.output.MotorcycleDTO;
+import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.MotorcycleMap;
 import com.betacom.sb.models.Motorcycle;
 import com.betacom.sb.models.Vehicle;
@@ -35,20 +36,11 @@ public class MotorcycleImpl implements IMotorcycleServices{
 	public void create(MotorcycleReq req) throws Exception {
 		log.debug("create {}", req);
 		Motorcycle moto = new Motorcycle();
-		if (req.getLicensePlate() == null) {
-			throw new BetacomRomaException("license plate cannot be null");
-		}
-		if (repoMoto.existsByLicensePlate(req.getLicensePlate()) || repoCar.existsByLicensePlate(req.getLicensePlate())) {
-			throw new BetacomRomaException("license plate already present");
-		}
-		moto.setLicensePlate(req.getLicensePlate());
-		
-		if (req.getDisplacementCc() == null) {
-			throw new BetacomRomaException("displacement cc cannot be null");
-		}
+
 		moto.setDisplacementCc(req.getDisplacementCc());
 		
-		Vehicle vehicle = Utils.checkVehicleMotorcycleCreate(req);
+		Vehicle vehicle = Utils.checkVehicleCreate(req);
+		vehicle.setVehicleType(VehicleType.MOTORCYCLE);
 	    
 	    moto.setVehicle(vehicle);
 	    vehicle.setMotorcycle(moto);
@@ -62,10 +54,6 @@ public class MotorcycleImpl implements IMotorcycleServices{
 	@Override
 	public void update(MotorcycleReq req) throws Exception {
 		log.debug("update {}", req);
-
-	    if (req.getId() == null || req.getId() == 0) {
-	        throw new BetacomRomaException("Motorcycle ID is required for update");
-	    }
 
 	    Motorcycle moto= repoMoto.findById(req.getId())
 	            .orElseThrow(() -> new BetacomRomaException("Motorcycle not found with id: " + req.getId()));

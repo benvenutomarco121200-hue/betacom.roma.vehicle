@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.BicycleReq;
 import com.betacom.sb.dto.output.BicycleDTO;
+import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.BicycleMap;
 import com.betacom.sb.models.Bicycle;
 import com.betacom.sb.models.Vehicle;
@@ -48,26 +49,14 @@ public class BicycleImpl implements IBicycleServices {
     public void create(BicycleReq req) throws Exception {
         log.debug("create {}", req);
 
-        if (req.getGearCount() == null) {
-            throw new BetacomRomaException("gear count cannot be null");
-        }
-        if (req.getBrakeType() == null) {
-            throw new BetacomRomaException("brake type cannot be null");
-        }
-        if (req.getSuspensionType() == null) {
-            throw new BetacomRomaException("suspension type cannot be null");
-        }
-        if (req.getIsFoldable() == null) {
-            throw new BetacomRomaException("is foldable cannot be null");
-        }
-
         Bicycle bicycle = new Bicycle();
         bicycle.setGearCount(req.getGearCount());
         bicycle.setBrakeType(req.getBrakeType());
         bicycle.setSuspensionType(req.getSuspensionType());
         bicycle.setIsFoldable(req.getIsFoldable());
         
-        Vehicle vehicle = Utils.checkVehicleBicycleCreate(req);
+        Vehicle vehicle = Utils.checkVehicleCreate(req);
+        vehicle.setVehicleType(VehicleType.BICYCLE);
 
         bicycle.setVehicle(vehicle);
         vehicle.setBicycle(bicycle);
@@ -80,10 +69,6 @@ public class BicycleImpl implements IBicycleServices {
     @Override
     public void update(BicycleReq req) throws Exception {
         log.debug("update {}", req);
-
-        if (req.getId() == null || req.getId() == 0) {
-            throw new BetacomRomaException("Bicycle ID is required for update");
-        }
 
         Bicycle bicycle = repoBicycle.findById(req.getId())
                 .orElseThrow(() -> new BetacomRomaException("Bicycle not found with id: " + req.getId()));

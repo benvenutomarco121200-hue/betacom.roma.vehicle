@@ -23,7 +23,7 @@ public class VehicleDTO {
     private String brand;
     private Integer productionYear;
     private String model;
-//    private CarDTO car;
-//    private MotorcycleDTO motorcycle;
-//    private BicycleDTO bicycle;
+    private CarDTO car;
+    private MotorcycleDTO motorcycle;
+    private BicycleDTO bicycle;
 }

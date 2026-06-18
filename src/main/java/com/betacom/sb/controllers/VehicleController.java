@@ -44,4 +44,18 @@ public class VehicleController {
 		}
 		return ResponseEntity.status(status).body(r);
 	}
+	
+	
+	@GetMapping("/selectByColor")
+	public ResponseEntity<Object> selectByColor(@RequestParam(required = true) String color) throws Exception{
+		Object r = new Object();
+		HttpStatus status = HttpStatus.OK;
+		try {
+			r = servVehicle.selectByColor(color);
+		} catch (Exception e) {
+			r = e.getMessage();
+			status = HttpStatus.BAD_REQUEST;
+		}
+		return ResponseEntity.status(status).body(r);
+	}
 }

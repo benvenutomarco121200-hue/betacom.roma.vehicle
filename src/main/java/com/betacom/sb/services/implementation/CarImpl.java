@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.betacom.sb.dto.input.CarReq;
 import com.betacom.sb.dto.output.CarDTO;
+import com.betacom.sb.enums.VehicleType;
 import com.betacom.sb.mapping.CarMap;
 import com.betacom.sb.models.Car;
 import com.betacom.sb.models.Vehicle;
@@ -51,25 +52,16 @@ public class CarImpl implements ICarServices{
 	public void create(CarReq req) throws Exception {
 		log.debug("create {}", req);
 		Car car = new Car();
-		if (req.getLicensePlate() == null) {
-			throw new BetacomRomaException("license plate cannot be null");
-		}
 		if (repoCar.existsByLicensePlate(req.getLicensePlate()) || repoMoto.existsByLicensePlate(req.getLicensePlate())) {
 			throw new BetacomRomaException("license plate already present");
 		}
+		
 		car.setLicensePlate(req.getLicensePlate());
-		
-		if (req.getDisplacementCc() == null) {
-			throw new BetacomRomaException("displacement cc cannot be null");
-		}
 		car.setDisplacementCc(req.getDisplacementCc());
-		
-		if (req.getDoorCount() == null){
-			throw new BetacomRomaException("door count cannot be null");
-		}
 		car.setDoorCount(req.getDoorCount());
 		
-		Vehicle vehicle = Utils.checkVehicleCarCreate(req);
+		Vehicle vehicle = Utils.checkVehicleCreate(req);
+		vehicle.setVehicleType(VehicleType.CAR);
 	    
 	    car.setVehicle(vehicle);
 	    vehicle.setCar(car);
@@ -82,10 +74,6 @@ public class CarImpl implements ICarServices{
 	@Override
 	public void update(CarReq req) throws Exception {
 	    log.debug("update {}", req);
-
-	    if (req.getId() == null || req.getId() == 0) {
-	        throw new BetacomRomaException("Car ID is required for update");
-	    }
 
 	    Car car = repoCar.findById(req.getId())
 	            .orElseThrow(() -> new BetacomRomaException("Car not found with id: " + req.getId()));

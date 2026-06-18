@@ -36,5 +36,14 @@ public class VehicleImpl implements IVehicleServices{
 		List<Vehicle> lV = repoVehicle.findAll();
 		return VehicleMap.buildListVehicleDTO(lV);
 	}
+
+	@Override
+	public List<VehicleDTO> selectByColor(String color) throws Exception {
+		log.debug("select by color");
+		List<Vehicle> lV = repoVehicle.selectByColor(color);
+		return VehicleMap.buildListVehicleDTO(lV);
+	}
+	
+	
 	
 }
