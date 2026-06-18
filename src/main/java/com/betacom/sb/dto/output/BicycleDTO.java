@@ -1,7 +1,8 @@
 package com.betacom.sb.dto.output;
 
-import com.betacom.sb.enums.BrakeType;
-import com.betacom.sb.enums.SuspensionType;
+import com.betacom.sb.models.BrakeType;
+import com.betacom.sb.models.SuspensionType;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,11 +15,12 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BicycleDTO {
     private Long id;
     private Integer gearCount;
-    private BrakeType brakeType;
-    private SuspensionType suspensionType;
+    private String brakeType;
+    private String suspensionType;
     private Boolean isFoldable;
     
     private VehicleDTO vehicle;

@@ -1,20 +1,17 @@
 package com.betacom.sb.models;
 
-import com.betacom.sb.enums.Category;
-import com.betacom.sb.enums.FuelType;
-import com.betacom.sb.enums.VehicleType;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.ForeignKey;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,16 +31,28 @@ public class Vehicle {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "vehicle_type", nullable = false, length = 50)
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(
+	    name = "vehicle_type_id", 
+	    nullable = false, 
+	    foreignKey = @ForeignKey(name = "fk_vehicle_vehicletype") 
+	)
     private VehicleType vehicleType;
     
-    @Enumerated(EnumType.STRING)
-    @Column(name = "fuel_type", nullable = false, length = 50)
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(
+	    name = "fuel_type_id", 
+	    nullable = false, 
+	    foreignKey = @ForeignKey(name = "fk_vehicle_fueltype") 
+	)
     private FuelType fuelType;
     
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 50)
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(
+	    name = "category_id", 
+	    nullable = false, 
+	    foreignKey = @ForeignKey(name = "fk_vehicle_category") 
+	)
     private Category category;
     
     @Column(name = "wheel_count", nullable = false)
