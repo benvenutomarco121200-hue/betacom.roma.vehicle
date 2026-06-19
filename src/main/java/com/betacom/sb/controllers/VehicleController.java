@@ -1,6 +1,5 @@
 package com.betacom.sb.controllers;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,31 +16,32 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @RequestMapping("/rest/vehicle")
 public class VehicleController {
+	
 	private final IVehicleServices servVehicle;
 	
+	@GetMapping("/listAll")
+	public ResponseEntity<Object> listAll() throws Exception{
+		return ResponseEntity.ok(servVehicle.listAll());
+	}
+	
 	@GetMapping("/list")
-	public ResponseEntity<Object> list() throws Exception{
-		Object r = new Object();
-		HttpStatus status = HttpStatus.OK;
-		try {
-			r = servVehicle.list();
-		} catch (Exception e) {
-			r = e.getMessage();
-			status = HttpStatus.BAD_REQUEST;
-		}
-		return ResponseEntity.status(status).body(r);
+	public ResponseEntity<Object> list(
+			@RequestParam (required = false)  Long id,
+			@RequestParam (required = false)  String vehicleType,
+			@RequestParam (required = false)  String category,
+			@RequestParam (required = false)  String fuelType,
+			@RequestParam (required = false)  String color,
+			@RequestParam (required = false)  String brand,
+			@RequestParam (required = false)  String model,
+			@RequestParam (required = false)  String licensePlate,
+			@RequestParam (required = false)  Integer doorCount
+			) throws Exception{
+		return ResponseEntity.ok(servVehicle.find(id, vehicleType, category, fuelType, color, brand, model, licensePlate, doorCount));
 	}
 	
 	@GetMapping("/getById")
-	public ResponseEntity<Object> getById(@RequestParam(required = true) Long id) throws Exception{
-		Object r = new Object();
-		HttpStatus status = HttpStatus.OK;
-		try {
-			r = servVehicle.getById(id);
-		} catch (Exception e) {
-			r = e.getMessage();
-			status = HttpStatus.BAD_REQUEST;
-		}
-		return ResponseEntity.status(status).body(r);
+	public ResponseEntity<Object> getById(@RequestParam (required = false)  Long id) throws Exception{
+		return ResponseEntity.ok(servVehicle.getById(id));
+		
 	}
 }

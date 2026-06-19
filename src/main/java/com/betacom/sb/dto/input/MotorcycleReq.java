@@ -1,10 +1,9 @@
 package com.betacom.sb.dto.input;
 
-import com.betacom.sb.models.Category;
-import com.betacom.sb.models.FuelType;
-
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,19 +12,19 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class MotorcycleReq {
+public class MotorcycleReq extends VehicleReq{
 
-	private Long id;
+	@NotBlank (groups = ValidationGroups.Create.class , message ="targa_invalid")
+	@Pattern(
+		    regexp = "^[A-Z]{2}[0-9]{5}$",
+		    groups = {ValidationGroups.Create.class, ValidationGroups.Update.class},
+		    message = "targa_invalid"
+		)
 	private String licensePlate;
+	
+	@NotNull (groups = ValidationGroups.Create.class , message ="cc_invalid")
 	private Integer displacementCc;
 	
-    private String category;
-    private Integer wheelCount;
-    private String color;
-    private String brand;
-    private Integer productionYear;
-    private String model;
-    private String fuelType;
+
 }
 

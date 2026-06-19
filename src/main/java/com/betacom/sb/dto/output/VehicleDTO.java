@@ -15,15 +15,16 @@ import lombok.Setter;
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class VehicleDTO {
+	
 	private Long id;
 	private Integer wheelCount;
 	private String color;
 	private String brand;
 	private Integer productionYear;
 	private String model;
-	private String vehicleType;
-	private String category;
-	private String fuelType; 
+	private VehicleTypeDTO vehicleType;
+	private CategoryDTO category;
+	private FuelTypeDTO fuelType; 
     private CarDTO car;
     private MotorcycleDTO motorcycle;
     private BicycleDTO bicycle;

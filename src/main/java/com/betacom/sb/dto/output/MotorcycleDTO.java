@@ -15,6 +15,7 @@ import lombok.Setter;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MotorcycleDTO {
+	
 	private Long id;
 	private String licensePlate;
 	private Integer displacementCc;

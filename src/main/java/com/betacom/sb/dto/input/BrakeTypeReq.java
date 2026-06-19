@@ -1,0 +1,20 @@
+package com.betacom.sb.dto.input;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Getter
+@ToString
+
+public class BrakeTypeReq {
+
+	private Long id;
+	
+	@NotNull (groups = ValidationGroups.Create.class , message ="brake_invalid")
+	@NotBlank (groups = ValidationGroups.Create.class , message ="brake_invalid")
+	private String brakeType;
+}

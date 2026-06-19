@@ -3,10 +3,13 @@ package com.betacom.sb.repositories;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.betacom.sb.models.BrakeType;
 
-public interface IBrakeTypeRepository extends JpaRepository<BrakeType, Integer>{
+@Repository
+public interface IBrakeTypeRepository extends JpaRepository<BrakeType, Long>{
 	Optional<BrakeType> findByBrakeIgnoreCase(String brake);
+	Boolean existByBrakeType(String brakeType);
 
 }
