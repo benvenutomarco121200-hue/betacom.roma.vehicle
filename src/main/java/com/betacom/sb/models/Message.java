@@ -22,5 +22,5 @@ public class Message {
 	
 	@Column (nullable = false,
 			length=100)
-	private String msg;
+	private String message;
 }

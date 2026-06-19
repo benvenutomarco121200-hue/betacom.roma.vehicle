@@ -23,7 +23,7 @@ public class SuspensionType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
+    @Column(nullable = false, unique = true, length = 50, name = "suspension_type")
     private String suspensionType; 
 }
 

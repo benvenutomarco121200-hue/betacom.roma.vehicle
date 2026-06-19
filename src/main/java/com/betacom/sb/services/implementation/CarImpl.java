@@ -52,8 +52,6 @@ public class CarImpl implements ICarServices {
 	public void create(CarReq req) throws Exception {
 		log.debug("create {}", req);
 		Car car = new Car();
-		Vehicle vehicle = repoVehicle.findById(servVehicle.create(req))
-				.orElseThrow(() -> new BetacomRomaException("vehicle not create"));
 		
 		if (req.getLicensePlate() == null) {
 			throw new BetacomRomaException("license plate cannot be null");
@@ -61,6 +59,10 @@ public class CarImpl implements ICarServices {
 		if (repoCar.existsByLicensePlate(req.getLicensePlate()) || repoMoto.existsByLicensePlate(req.getLicensePlate())) {
 			throw new BetacomRomaException("license plate already present");
 		}
+		
+		Vehicle vehicle = repoVehicle.findById(servVehicle.create(req))
+				.orElseThrow(() -> new BetacomRomaException("vehicle not create"));
+		
 		car.setLicensePlate(req.getLicensePlate().toUpperCase());
 		
 		car.setDisplacementCc(Optional.ofNullable(req.getDisplacementCc())

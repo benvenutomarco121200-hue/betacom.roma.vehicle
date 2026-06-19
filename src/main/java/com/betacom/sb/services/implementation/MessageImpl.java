@@ -21,7 +21,7 @@ public class MessageImpl implements IMessageServices {
 		log.debug("get {}", code);
 		Message msg = repoMessage.findById(code)
 				.orElse( new  Message(code, code));
-		return msg.getMsg();
+		return msg.getMessage();
 	}
 
 }
