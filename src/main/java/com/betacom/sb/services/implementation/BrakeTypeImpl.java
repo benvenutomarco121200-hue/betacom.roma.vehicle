@@ -25,8 +25,6 @@ public class BrakeTypeImpl implements IBrakeTypeServices {
 	@Override
 	public void create(BrakeTypeReq req) throws BetacomRomaException {
 		log.debug("create brake type {}",req);
-		if (brakeRepo.existByBrakeType(req.getBrakeType()))
-			throw new BetacomRomaException("Brake_Type_exits");
 		
 		BrakeType tB = new BrakeType();
 		tB.setBrakeType(req.getBrakeType());

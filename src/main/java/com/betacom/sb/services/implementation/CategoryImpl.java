@@ -25,8 +25,6 @@ public class CategoryImpl implements ICategoryServices{
 	@Override
 	public void create(CategoryReq req) throws BetacomRomaException {
 		log.debug("create category {}",req);
-		if (categoryRepo.existByCategory(req.getCategory()))
-			throw new BetacomRomaException("Category_exits");
 		
 		Category tC = new Category();
 		tC.setCategory(req.getCategory());

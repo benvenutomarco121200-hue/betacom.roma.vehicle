@@ -39,6 +39,8 @@
 
     drop table if exists suspension_types cascade;
 
+    drop table if exists system_message cascade;
+
     drop table if exists vehicle_types cascade;
 
     drop table if exists vehicles cascade;

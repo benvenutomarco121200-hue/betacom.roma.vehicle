@@ -27,8 +27,6 @@ public class FuelTypeImpl implements IFuelTypeServices {
 	@Override
 	public void create(FuelTypeReq req) throws BetacomRomaException {
 		log.debug("create fuel type {}",req);
-		if (fuelRepo.existByFuel(req.getFuelType()))
-			throw new BetacomRomaException("Fuel_type_exits");
 		
 		FuelType tF = new FuelType();
 		tF.setFuel(req.getFuelType());

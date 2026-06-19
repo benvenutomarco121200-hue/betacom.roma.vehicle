@@ -27,8 +27,6 @@ public class SuspensionTypeImpl implements ISuspensionTypeServices {
 	@Override
 	public void create(SuspensionTypeReq req) throws BetacomRomaException {
 		log.debug("create suspension type {}",req);
-		if (suspensionRepo.existBySuspension(req.getSuspensionType()))
-			throw new BetacomRomaException("Suspension_type_exits");
 		
 		SuspensionType tS = new SuspensionType();
 		tS.setSuspensionType(req.getSuspensionType());

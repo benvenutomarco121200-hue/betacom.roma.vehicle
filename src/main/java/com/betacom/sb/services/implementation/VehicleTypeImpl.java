@@ -27,8 +27,6 @@ public class VehicleTypeImpl implements IVehicleTypeServices {
 	@Override
 	public void create(VehicleTypeReq req) throws BetacomRomaException {
 		log.debug("create vehicle type {}",req);
-		if (vehicleTypeRepo.existsByType(req.getVehicleType()))
-			throw new BetacomRomaException("Vehcile_type_exits");
 		
 		VehicleType tV = new VehicleType();
 		tV.setVehicleType(req.getVehicleType());
