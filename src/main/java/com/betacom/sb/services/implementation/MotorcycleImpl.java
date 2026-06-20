@@ -53,7 +53,6 @@ public class MotorcycleImpl implements IMotorcycleServices {
 		moto.setVehicle(vehicle);
 	    vehicle.setMotorcycle(moto);
 		
-	    repoVehicle.save(vehicle);
 		repoMoto.save(moto);
 	}
 

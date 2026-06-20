@@ -76,6 +76,7 @@ public class VehicleImpl implements IVehicleServices{
 		                .getId())
 		        .orElseThrow(() -> new BetacomRomaException("fuel_type_invalid"));
 		vehicle.setFuelType(fuelType);
+		
 
 		VehicleType vehicleType = repoType.findById(
 		        Optional.ofNullable(req.getVehicleType())
@@ -105,19 +106,19 @@ public class VehicleImpl implements IVehicleServices{
 	    Optional.ofNullable(req.getWheelCount()).ifPresent(vehicle::setWheelCount);
 	    Optional.ofNullable(req.getProductionYear()).ifPresent(vehicle::setProductionYear);
 
-	    if (req.getFuelType() != null) {
+	    if (req.getFuelType() != null && req.getFuelType().getId() != null) {
 	        FuelType fuelType = repoFuel.findById(req.getFuelType().getId())
 	                .orElseThrow(() -> new BetacomRomaException("fuel_type_invalid"));
 	        vehicle.setFuelType(fuelType);
 	    }
 
-	    if (req.getVehicleType() != null) {
+	    if (req.getVehicleType() != null && req.getVehicleType().getId() != null) {
 	        VehicleType vehicleType = repoType.findById(req.getVehicleType().getId())
 	                .orElseThrow(() -> new BetacomRomaException("vehicle_type_invalid"));
 	        vehicle.setVehicleType(vehicleType);
 	    }
 
-	    if (req.getCategory() != null) {
+	    if (req.getCategory() != null && req.getCategory().getId() != null) {
 	        Category category = repoCategory.findById(req.getCategory().getId())
 	                .orElseThrow(() -> new BetacomRomaException("category_invalid"));
 	        vehicle.setCategory(category);

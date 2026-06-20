@@ -88,7 +88,6 @@ public class BicycleImpl implements IBicycleServices {
         bicycle.setVehicle(vehicle);
         vehicle.setBicycle(bicycle);
 
-        repoVehicle.save(vehicle);
         repoBicycle.save(bicycle);
     }
 
@@ -110,13 +109,13 @@ public class BicycleImpl implements IBicycleServices {
 	        throw new BetacomRomaException("Vehicle linked to bicycle not found");
 	    }
 	    
-	    if (req.getBrakeType() != null) {
+	    if (req.getBrakeType() != null && req.getBrakeType().getId() != null) {
 	        BrakeType brakeType = repoBrake.findById(req.getBrakeType().getId())
 	                .orElseThrow(() -> new BetacomRomaException("brake_type_invalid"));
 	        bicycle.setBrakeType(brakeType);
 	    }
 
-	    if (req.getSuspensionType() != null) {
+	    if (req.getSuspensionType() != null && req.getSuspensionType().getId() != null) {
 	        SuspensionType suspensionType = repoSuspension.findById(req.getSuspensionType().getId())
 	                .orElseThrow(() -> new BetacomRomaException("suspension_type_invalid"));
 	        bicycle.setSuspensionType(suspensionType);

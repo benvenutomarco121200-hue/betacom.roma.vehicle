@@ -53,6 +53,8 @@ public class CarImpl implements ICarServices {
 		log.debug("create {}", req);
 		Car car = new Car();
 		
+		
+		
 		if (req.getLicensePlate() == null) {
 			throw new BetacomRomaException("license plate cannot be null");
 		}
@@ -74,7 +76,6 @@ public class CarImpl implements ICarServices {
 	    car.setVehicle(vehicle);
 	    vehicle.setCar(car);
 		
-	    repoVehicle.save(vehicle);
 		repoCar.save(car);
 	}
 	
