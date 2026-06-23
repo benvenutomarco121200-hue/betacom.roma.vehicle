@@ -43,7 +43,7 @@ public class SuspensionTypeTest {
 	public void createSuspensionTypeTest() throws Exception{
 		log.debug("createSuspensionTypeTest");
 		SuspensionTypeReq req = new SuspensionTypeReq();
-		req.setSuspensionType("qualcosa");
+		req.setSuspensionType("air");
 		
 		mockMvc.perform(post("/rest/suspensionType/create")
 				.contentType(MediaType.APPLICATION_JSON)

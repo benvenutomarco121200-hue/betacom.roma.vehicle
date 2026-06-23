@@ -3459,3 +3459,200 @@ delete from fuel_types where id=? [23503-240]] [delete from fuel_types where id=
 2026-06-23T14:18:19.462+02:00  INFO 24484 --- [vehicle_SB_JPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-23T14:18:19.463+02:00  INFO 24484 --- [vehicle_SB_JPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-06-23T14:18:19.465+02:00  INFO 24484 --- [vehicle_SB_JPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-23T14:33:15.193+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : Starting VehicleTypeTest using Java 25.0.2 with PID 2180 (started by Lorenzo in C:\Users\utente\Programmazione\Java\Accademia\Condiviso\Recente\betacom.roma.vehicle)
+2026-06-23T14:33:15.195+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-23T14:33:15.195+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : No active profile set, falling back to 1 default profile: "default"
+2026-06-23T14:33:15.815+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-23T14:33:15.884+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 10 JPA repository interfaces.
+2026-06-23T14:33:16.180+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-23T14:33:16.230+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-23T14:33:16.624+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-23T14:33:16.655+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-23T14:33:16.897+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dbJPA user=SA
+2026-06-23T14:33:16.899+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-23T14:33:16.981+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:dbJPA]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: DBJPA/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-23T14:33:18.066+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-23T14:33:18.161+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23T14:33:18.221+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-23T14:33:19.154+02:00  WARN 2180 --- [vehicle_SB_JPA] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-23T14:33:19.616+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-23T14:33:19.616+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-23T14:33:19.617+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-06-23T14:33:19.647+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : Started VehicleTypeTest in 4.755 seconds (process running for 5.896)
+2026-06-23T14:33:19.650+02:00  WARN 2180 --- [vehicle_SB_JPA] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-23T14:33:19.650+02:00  WARN 2180 --- [vehicle_SB_JPA] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-23T14:33:19.876+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : createVehicleTypeTest
+2026-06-23T14:33:20.039+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleTypeImpl   : create vehicle type VehicleTypeReq(id=3, vehicleType=car)
+2026-06-23T14:33:20.097+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.174+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : createVehicleTypeTestError
+2026-06-23T14:33:20.183+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get vehicle_invalid
+2026-06-23T14:33:20.188+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : rc create :vehicle_invalid
+2026-06-23T14:33:20.191+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : listAllVehicleType
+2026-06-23T14:33:20.191+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleTypeImpl   : List
+2026-06-23T14:33:20.253+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.vehicleType.VehicleTypeTest       : com.betacom.sb.dto.output.VehicleTypeDTO@15bd6b76
+2026-06-23T14:33:20.258+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.category.CategoryTest]: CategoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.268+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.category.CategoryTest
+2026-06-23T14:33:20.269+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.category.CategoryTest]: CategoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.271+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.category.CategoryTest
+2026-06-23T14:33:20.274+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.category.CategoryTest     : createCategoryTest
+2026-06-23T14:33:20.278+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.CategoryImpl      : create category CategoryReq(id=3, category=sedan)
+2026-06-23T14:33:20.280+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.282+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.CategoryImpl      : create category CategoryReq(id=null, category=sedan2)
+2026-06-23T14:33:20.284+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.288+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.category.CategoryTest     : createCategoryTestError
+2026-06-23T14:33:20.289+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get category_invalid
+2026-06-23T14:33:20.291+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.category.CategoryTest     : rc create :category_invalid
+2026-06-23T14:33:20.293+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.category.CategoryTest     : listAllCategory
+2026-06-23T14:33:20.294+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.CategoryImpl      : List
+2026-06-23T14:33:20.299+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.category.CategoryTest     : CategoryDTO(id=1, category=sedan)
+2026-06-23T14:33:20.299+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.category.CategoryTest     : CategoryDTO(id=2, category=sedan2)
+2026-06-23T14:33:20.302+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.fuelType.FuelTypeTest]: FuelTypeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.309+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.fuelType.FuelTypeTest
+2026-06-23T14:33:20.309+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.fuelType.FuelTypeTest]: FuelTypeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.310+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.fuelType.FuelTypeTest
+2026-06-23T14:33:20.313+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.fuelType.FuelTypeTest     : createFuelTypeTest
+2026-06-23T14:33:20.318+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.FuelTypeImpl      : create fuel type FuelTypeReq(id=3, fuelType=lpg)
+2026-06-23T14:33:20.320+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.324+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.fuelType.FuelTypeTest     : createFuelTypeTestError
+2026-06-23T14:33:20.326+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get fuel_invalid
+2026-06-23T14:33:20.327+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.fuelType.FuelTypeTest     : rc create :fuel_invalid
+2026-06-23T14:33:20.329+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.fuelType.FuelTypeTest     : listAllFuelType
+2026-06-23T14:33:20.330+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.FuelTypeImpl      : List
+2026-06-23T14:33:20.336+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.fuelType.FuelTypeTest     : com.betacom.sb.dto.output.FuelTypeDTO@ce0c2b3
+2026-06-23T14:33:20.338+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.brakeType.BrakeTypeTest]: BrakeTypeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.343+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.brakeType.BrakeTypeTest
+2026-06-23T14:33:20.344+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.brakeType.BrakeTypeTest]: BrakeTypeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.345+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.brakeType.BrakeTypeTest
+2026-06-23T14:33:20.348+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.brakeType.BrakeTypeTest   : createBrakeTypeTest
+2026-06-23T14:33:20.352+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BrakeTypeImpl     : create brake type BrakeTypeReq(id=null, brakeType=qualcosa)
+2026-06-23T14:33:20.354+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.359+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.brakeType.BrakeTypeTest   : createBrakeTypeTestError
+2026-06-23T14:33:20.360+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get brake_invalid
+2026-06-23T14:33:20.362+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.brakeType.BrakeTypeTest   : BrakeType create: brake_invalid
+2026-06-23T14:33:20.365+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.brakeType.BrakeTypeTest   : listAllBrakeType
+2026-06-23T14:33:20.366+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BrakeTypeImpl     : List
+2026-06-23T14:33:20.373+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.brakeType.BrakeTypeTest   : BrakeTypeDTO(id=1, brakeType=qualcosa)
+2026-06-23T14:33:20.376+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.suspensionType.SuspensionTypeTest]: SuspensionTypeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.384+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.suspensionType.SuspensionTypeTest
+2026-06-23T14:33:20.385+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.suspensionType.SuspensionTypeTest]: SuspensionTypeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.386+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.suspensionType.SuspensionTypeTest
+2026-06-23T14:33:20.389+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.suspensionType.SuspensionTypeTest  : createSuspensionTypeTest
+2026-06-23T14:33:20.392+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.i.SuspensionTypeImpl             : create suspension type SuspensionTypeReq(id=null, suspensionType=qualcosa)
+2026-06-23T14:33:20.393+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.396+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.suspensionType.SuspensionTypeTest  : createSuspensionTypeTestError
+2026-06-23T14:33:20.398+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get suspension_invalid
+2026-06-23T14:33:20.400+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.suspensionType.SuspensionTypeTest  : suspensionType create: suspension_invalid
+2026-06-23T14:33:20.403+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.suspensionType.SuspensionTypeTest  : listAllSuspensionTypeTest
+2026-06-23T14:33:20.403+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.i.SuspensionTypeImpl             : List
+2026-06-23T14:33:20.409+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.suspensionType.SuspensionTypeTest  : com.betacom.sb.dto.output.SuspensionTypeDTO@103c8ca8
+2026-06-23T14:33:20.412+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.motorcycle.MotorcycleTest]: MotorcycleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.422+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.motorcycle.MotorcycleTest
+2026-06-23T14:33:20.423+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.motorcycle.MotorcycleTest]: MotorcycleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.426+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.motorcycle.MotorcycleTest
+2026-06-23T14:33:20.429+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.betacom.sb.motorcycle.MotorcycleTest   : createMotorcycleTest
+2026-06-23T14:33:20.450+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MotorcycleImpl    : create com.betacom.sb.dto.input.MotorcycleReq@5664ef6
+2026-06-23T14:33:20.500+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.506+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.betacom.sb.motorcycle.MotorcycleTest   : createMotorcycleTestError
+2026-06-23T14:33:20.508+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get cc_invalid
+2026-06-23T14:33:20.510+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.betacom.sb.motorcycle.MotorcycleTest   : motorcycle create: cc_invalid
+2026-06-23T14:33:20.512+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.betacom.sb.motorcycle.MotorcycleTest   : listAllBicylceTest
+2026-06-23T14:33:20.513+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MotorcycleImpl    : list
+2026-06-23T14:33:20.547+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.betacom.sb.motorcycle.MotorcycleTest   : com.betacom.sb.dto.output.MotorcycleDTO@15d9ba97
+2026-06-23T14:33:20.549+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.betacom.sb.motorcycle.MotorcycleTest   : updateMotorcycleTest
+2026-06-23T14:33:20.551+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MotorcycleImpl    : update com.betacom.sb.dto.input.MotorcycleReq@5ace0b38
+2026-06-23T14:33:20.564+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_updated
+2026-06-23T14:33:20.569+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.car.CarTest]: CarTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.576+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.car.CarTest
+2026-06-23T14:33:20.577+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.car.CarTest]: CarTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.578+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.car.CarTest
+2026-06-23T14:33:20.581+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.car.CarTest               : createCarTest
+2026-06-23T14:33:20.590+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.services.implementation.CarImpl   : create com.betacom.sb.dto.input.CarReq@28c3284b
+2026-06-23T14:33:20.596+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.600+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.car.CarTest               : createCarTestError
+2026-06-23T14:33:20.602+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get porte_invalid
+2026-06-23T14:33:20.603+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.car.CarTest               : Car create: porte_invalid
+2026-06-23T14:33:20.605+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.car.CarTest               : listAllCarTest
+2026-06-23T14:33:20.606+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.services.implementation.CarImpl   : list
+2026-06-23T14:33:20.616+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.car.CarTest               : com.betacom.sb.dto.output.CarDTO@78ae6b30
+2026-06-23T14:33:20.619+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.car.CarTest               : updateCarTest
+2026-06-23T14:33:20.620+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.services.implementation.CarImpl   : update com.betacom.sb.dto.input.CarReq@7a9a0bef
+2026-06-23T14:33:20.624+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_updated
+2026-06-23T14:33:20.628+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.bicycle.BicycleTest]: BicycleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.636+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.bicycle.BicycleTest
+2026-06-23T14:33:20.637+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.bicycle.BicycleTest]: BicycleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.639+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.bicycle.BicycleTest
+2026-06-23T14:33:20.641+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.bicycle.BicycleTest       : createBicylceTest
+2026-06-23T14:33:20.650+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BicycleImpl       : create com.betacom.sb.dto.input.BicycleReq@1077b7f7
+2026-06-23T14:33:20.656+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_created
+2026-06-23T14:33:20.659+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.bicycle.BicycleTest       : createBicylceTestError
+2026-06-23T14:33:20.662+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get marce_invalid
+2026-06-23T14:33:20.664+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.bicycle.BicycleTest       : bicycle create: marce_invalid
+2026-06-23T14:33:20.667+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.bicycle.BicycleTest       : listAllBicylceTest
+2026-06-23T14:33:20.667+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BicycleImpl       : list
+2026-06-23T14:33:20.676+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.bicycle.BicycleTest       : BicycleDTO(id=1, gearCount=3, brakeType=BrakeTypeDTO(id=1, brakeType=qualcosa), suspensionType=com.betacom.sb.dto.output.SuspensionTypeDTO@1036e813, isFoldable=true, vehicle=com.betacom.sb.dto.output.VehicleDTO@357a40a0)
+2026-06-23T14:33:20.678+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.bicycle.BicycleTest       : updateBicycleTest
+2026-06-23T14:33:20.680+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BicycleImpl       : update com.betacom.sb.dto.input.BicycleReq@33dcd988
+2026-06-23T14:33:20.684+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_updated
+2026-06-23T14:33:20.687+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.vehicle.VehicleTest]: VehicleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.692+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.vehicle.VehicleTest
+2026-06-23T14:33:20.693+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.vehicle.VehicleTest]: VehicleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.694+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.vehicle.VehicleTest
+2026-06-23T14:33:20.696+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : listAllVehicleTest
+2026-06-23T14:33:20.697+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : list
+2026-06-23T14:33:20.708+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : Vehicle trovato: com.betacom.sb.dto.output.VehicleDTO@79ed8
+2026-06-23T14:33:20.710+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : listVehicleByBrandTest
+2026-06-23T14:33:20.715+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : find null/null/null/null/null/BMW/null/null
+2026-06-23T14:33:20.732+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : Size:2
+2026-06-23T14:33:20.737+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : listVehicleByModelTest
+2026-06-23T14:33:20.737+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : find null/null/null/null/null/null/M3/null
+2026-06-23T14:33:20.741+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : Size:2
+2026-06-23T14:33:20.744+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : listVehicleByLicensePlateTest
+2026-06-23T14:33:20.745+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : find null/null/null/null/null/null/null/ZZ999ZZ
+2026-06-23T14:33:20.747+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : Size:1
+2026-06-23T14:33:20.752+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : getVehicleByIdTest
+2026-06-23T14:33:20.753+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : get at id 1
+2026-06-23T14:33:20.762+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.vehicle.VehicleTest       : getVehicleByIdErrorTest
+2026-06-23T14:33:20.762+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleImpl       : get at id 99999
+2026-06-23T14:33:20.764+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get vehicle not found
+2026-06-23T14:33:20.769+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.delete.DeleteFinalTest]: DeleteFinalTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.775+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.delete.DeleteFinalTest
+2026-06-23T14:33:20.776+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.sb.delete.DeleteFinalTest]: DeleteFinalTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-23T14:33:20.777+02:00  INFO 2180 --- [vehicle_SB_JPA] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.sb.VehicleSbJpaApplication for test class com.betacom.sb.delete.DeleteFinalTest
+2026-06-23T14:33:20.779+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteCarTest
+2026-06-23T14:33:20.781+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.sb.services.implementation.CarImpl   : delete 1
+2026-06-23T14:33:20.789+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.821+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteMotorcycleTest
+2026-06-23T14:33:20.822+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MotorcycleImpl    : delete 1
+2026-06-23T14:33:20.825+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.828+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteBicylceTest
+2026-06-23T14:33:20.829+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BicycleImpl       : delete 1
+2026-06-23T14:33:20.831+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.833+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteVehicleTypeTest
+2026-06-23T14:33:20.835+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.VehicleTypeImpl   : delete 1
+2026-06-23T14:33:20.837+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.840+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteCategoryTest
+2026-06-23T14:33:20.841+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.CategoryImpl      : delete 1
+2026-06-23T14:33:20.843+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.847+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteFuelTypeTest
+2026-06-23T14:33:20.848+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.FuelTypeImpl      : delete 1
+2026-06-23T14:33:20.850+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.853+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteBrakeTypeTest
+2026-06-23T14:33:20.853+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.BrakeTypeImpl     : delete 1
+2026-06-23T14:33:20.855+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:20.858+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] com.betacom.sb.delete.DeleteFinalTest    : deleteSuspensionTypeTest
+2026-06-23T14:33:20.859+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.i.SuspensionTypeImpl             : delete 1
+2026-06-23T14:33:20.861+02:00 DEBUG 2180 --- [vehicle_SB_JPA] [main] c.b.s.s.implementation.MessageImpl       : get rest_deleted
+2026-06-23T14:33:21.925+02:00  INFO 2180 --- [vehicle_SB_JPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23T14:33:21.927+02:00  INFO 2180 --- [vehicle_SB_JPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-23T14:33:21.930+02:00  INFO 2180 --- [vehicle_SB_JPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

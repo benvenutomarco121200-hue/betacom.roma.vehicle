@@ -43,7 +43,7 @@ public class BrakeTypeTest {
 	public void createBrakeTypeTest() throws Exception {
 		log.debug("createBrakeTypeTest");
 		BrakeTypeReq req = new BrakeTypeReq();
-		req.setBrakeType("qualcosa");
+		req.setBrakeType("disc");
 		
 		mockMvc.perform(post("/rest/brakeType/create")
 				.contentType(MediaType.APPLICATION_JSON)
