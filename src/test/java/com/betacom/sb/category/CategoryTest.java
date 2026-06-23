@@ -50,6 +50,14 @@ public class CategoryTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(req))
 				).andExpect(status().isOk());
+		
+		CategoryReq req2 = new CategoryReq();
+		req2.setCategory("sedan2");
+		
+		mockMvc.perform(post("/rest/category/create")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(req2))
+				).andExpect(status().isOk());
 	}
 	
 	@Test
@@ -70,7 +78,6 @@ public class CategoryTest {
 		
 		log.debug("rc create :{}", dto.getMsg());
 	}
-	
 	
 	@Test
 	@Order(3)
