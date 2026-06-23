@@ -1,6 +1,7 @@
 package com.betacom.sb.delete;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -30,37 +31,85 @@ public class DeleteFinalTest {
         log.debug("deleteCarTest");
 
         mockMvc.perform(delete("/rest/car/delete/1"))
+        		.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
     
     @Test
     @Order(2)
+    public void deleteMotorcycleTest() throws Exception {
+    	log.debug("deleteMotorcycleTest");
+    	
+    	mockMvc.perform(delete("/rest/motorcycle/delete/1"))
+    	.andDo(print())
+    	.andExpect(status().isOk())
+    	.andExpect(jsonPath("$.msg").exists());
+    }
+    
+    @Test
+	@Order(3)
+	public void deleteBicylceTest() throws Exception{
+		log.debug("deleteBicylceTest");
+		
+		mockMvc.perform(delete("/rest/bicycle/delete/" +  "1"))
+				.andDo(print())
+	            .andExpect(status().isOk())
+	            .andExpect(jsonPath("$.msg").exists());  
+	}
+    
+    @Test
+    @Order(4)
     public void deleteVehicleTypeTest() throws Exception {
         log.debug("deleteVehicleTypeTest");
 
         mockMvc.perform(delete("/rest/vehicleType/delete/1"))
+				.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
 
     @Test
-    @Order(3)
+    @Order(5)
     public void deleteCategoryTest() throws Exception {
         log.debug("deleteCategoryTest");
 
         mockMvc.perform(delete("/rest/category/delete/1"))
+				.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
 
     @Test
-    @Order(4)
+    @Order(6)
     public void deleteFuelTypeTest() throws Exception {
         log.debug("deleteFuelTypeTest");
 
         mockMvc.perform(delete("/rest/fuelType/delete/1"))
+				.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
+    
+    @Test
+	@Order(7)
+	public void deleteBrakeTypeTest() throws Exception{
+		log.debug("deleteBrakeTypeTest");
+		
+		mockMvc.perform(delete("/rest/brakeType/delete/" +  "1"))
+				.andDo(print())
+	            .andExpect(status().isOk())
+	            .andExpect(jsonPath("$.msg").exists());  
+	}
+    
+    @Test
+	@Order(8)
+	public void deleteSuspensionTypeTest() throws Exception{
+		log.debug("deleteSuspensionTypeTest");
+		
+		mockMvc.perform(delete("/rest/suspensionType/delete/" +  "1"))
+				.andDo(print())
+	            .andExpect(status().isOk())
+	            .andExpect(jsonPath("$.msg").exists());  
+	}
 }

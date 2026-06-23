@@ -1,10 +1,8 @@
-package com.betacom.sb.SuspensionType;
+package com.betacom.sb.suspensionType;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.List;
@@ -82,8 +80,8 @@ public class SuspensionTypeTest {
 	
 	@Test
 	@Order(3)
-	public void listAllSuspensionType() throws Exception{
-		log.debug("listAllSuspensionType");
+	public void listAllSuspensionTypeTest() throws Exception{
+		log.debug("listAllSuspensionTypeTest");
 		
 		MvcResult result = mockMvc.perform(get("/rest/suspensionType/list"))
 	            .andExpect(status().isOk())
@@ -100,15 +98,4 @@ public class SuspensionTypeTest {
 		
 		lS.forEach(s -> log.debug(s.toString()));
 	}
-	
-	@Test
-	@Order(4)
-	public void deleteSuspensionType() throws Exception{
-		log.debug("deleteSuspensionType");
-		
-		mockMvc.perform(delete("/rest/suspensionType/delete/" +  "1"))
-	            .andExpect(status().isOk())
-	            .andExpect(jsonPath("$.msg").exists());  
-	}
-	
 }

@@ -1,10 +1,8 @@
 package com.betacom.sb.brakeType;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.List;
@@ -100,15 +98,4 @@ public class BrakeTypeTest {
 		
 		lS.forEach(s -> log.debug(s.toString()));
 	}
-	
-	@Test
-	@Order(4)
-	public void deleteBrakeType() throws Exception{
-		log.debug("deleteBrakeType");
-		
-		mockMvc.perform(delete("/rest/brakeType/delete/" +  "1"))
-	            .andExpect(status().isOk())
-	            .andExpect(jsonPath("$.msg").exists());  
-	}
-
 }
