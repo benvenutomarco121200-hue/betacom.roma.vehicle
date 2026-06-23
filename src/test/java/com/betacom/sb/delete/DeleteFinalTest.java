@@ -1,7 +1,6 @@
 package com.betacom.sb.delete;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -31,7 +30,6 @@ public class DeleteFinalTest {
         log.debug("deleteCarTest");
 
         mockMvc.perform(delete("/rest/car/delete/1"))
-        		.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
@@ -42,7 +40,6 @@ public class DeleteFinalTest {
     	log.debug("deleteMotorcycleTest");
     	
     	mockMvc.perform(delete("/rest/motorcycle/delete/1"))
-    	.andDo(print())
     	.andExpect(status().isOk())
     	.andExpect(jsonPath("$.msg").exists());
     }
@@ -53,7 +50,6 @@ public class DeleteFinalTest {
 		log.debug("deleteBicylceTest");
 		
 		mockMvc.perform(delete("/rest/bicycle/delete/" +  "1"))
-				.andDo(print())
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$.msg").exists());  
 	}
@@ -64,7 +60,6 @@ public class DeleteFinalTest {
         log.debug("deleteVehicleTypeTest");
 
         mockMvc.perform(delete("/rest/vehicleType/delete/1"))
-				.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
@@ -75,7 +70,6 @@ public class DeleteFinalTest {
         log.debug("deleteCategoryTest");
 
         mockMvc.perform(delete("/rest/category/delete/1"))
-				.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
@@ -86,7 +80,6 @@ public class DeleteFinalTest {
         log.debug("deleteFuelTypeTest");
 
         mockMvc.perform(delete("/rest/fuelType/delete/1"))
-				.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.msg").exists());
     }
@@ -97,7 +90,6 @@ public class DeleteFinalTest {
 		log.debug("deleteBrakeTypeTest");
 		
 		mockMvc.perform(delete("/rest/brakeType/delete/" +  "1"))
-				.andDo(print())
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$.msg").exists());  
 	}
@@ -108,7 +100,6 @@ public class DeleteFinalTest {
 		log.debug("deleteSuspensionTypeTest");
 		
 		mockMvc.perform(delete("/rest/suspensionType/delete/" +  "1"))
-				.andDo(print())
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$.msg").exists());  
 	}

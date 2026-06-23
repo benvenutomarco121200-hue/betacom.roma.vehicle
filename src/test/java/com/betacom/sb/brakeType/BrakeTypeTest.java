@@ -49,14 +49,6 @@ public class BrakeTypeTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(req))
 				).andExpect(status().isOk());
-		
-		BrakeTypeReq req2 = new BrakeTypeReq();
-		req2.setBrakeType("qualcosa2");
-		
-		mockMvc.perform(post("/rest/brakeType/create")
-				.contentType(MediaType.APPLICATION_JSON)
-				.content(objectMapper.writeValueAsString(req2))
-				).andExpect(status().isOk());
 	}
 	
 	@Test

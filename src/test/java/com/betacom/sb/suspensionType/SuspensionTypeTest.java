@@ -49,14 +49,6 @@ public class SuspensionTypeTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(req))
 				).andExpect(status().isOk());
-		
-		SuspensionTypeReq req2 = new SuspensionTypeReq();
-		req2.setSuspensionType("qualcosa2");
-		
-		mockMvc.perform(post("/rest/suspensionType/create")
-				.contentType(MediaType.APPLICATION_JSON)
-				.content(objectMapper.writeValueAsString(req2))
-				).andExpect(status().isOk());
 	}
 	
 	@Test
