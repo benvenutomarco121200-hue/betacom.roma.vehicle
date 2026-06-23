@@ -1,4 +1,4 @@
-package com.betacom.sb.category;
+package com.betacom.sb.vehicleType;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -18,9 +18,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import com.betacom.sb.dto.input.CategoryReq;
-import com.betacom.sb.dto.output.CategoryDTO;
+import com.betacom.sb.dto.input.VehicleTypeReq;
 import com.betacom.sb.dto.output.ResponseDTO;
+import com.betacom.sb.dto.output.VehicleTypeDTO;
 
 import lombok.extern.slf4j.Slf4j;
 import tools.jackson.core.type.TypeReference;
@@ -30,7 +30,7 @@ import tools.jackson.databind.ObjectMapper;
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CategoryTest {
+public class VehicleTypeTest {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -40,13 +40,13 @@ public class CategoryTest {
 	
 	@Test
 	@Order(1)
-	public void createCategoryTest() throws Exception{
-		log.debug("createCategoryTest");
-		CategoryReq req = new CategoryReq();
-		req.setCategory("sedan");
+	public void createVehicleTypeTest() throws Exception{
+		log.debug("createVehicleTypeTest");
+		VehicleTypeReq req = new VehicleTypeReq();
+		req.setVehicleType("car");
 		req.setId((long) 3);
 		
-		mockMvc.perform(post("/rest/category/create")
+		mockMvc.perform(post("/rest/vehicleType/create")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(req))
 				).andExpect(status().isOk());
@@ -54,11 +54,11 @@ public class CategoryTest {
 	
 	@Test
 	@Order(2)
-	public void createCategoryTestError() throws Exception{
-		log.debug("createCategoryTestError");
-		CategoryReq req = new CategoryReq();
+	public void createVehicleTypeTestError() throws Exception{
+		log.debug("createVehicleTypeTestError");
+		VehicleTypeReq req = new VehicleTypeReq();
 		
-		MvcResult result =  mockMvc.perform(post("/rest/category/create")
+		MvcResult result =  mockMvc.perform(post("/rest/vehicleType/create")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(req))
 				)
@@ -74,18 +74,18 @@ public class CategoryTest {
 	
 	@Test
 	@Order(3)
-	public void listAllCategory() throws Exception{
-		log.debug("listAllCategory");
+	public void listAllVehicleType() throws Exception{
+		log.debug("listAllVehicleType");
 		
-		MvcResult result = mockMvc.perform(get("/rest/category/list"))
+		MvcResult result = mockMvc.perform(get("/rest/vehicleType/list"))
 	            .andExpect(status().isOk())
 	            .andReturn();
 		  
 		String json = result.getResponse().getContentAsString();
 		
-		List<CategoryDTO> lS = objectMapper.readValue(
+		List<VehicleTypeDTO> lS = objectMapper.readValue(
 	            json,
-	            new TypeReference<List<CategoryDTO>>() {}
+	            new TypeReference<List<VehicleTypeDTO>>() {}
 	    );
 		
 		assertFalse(lS.isEmpty());
