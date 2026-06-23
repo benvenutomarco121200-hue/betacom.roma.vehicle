@@ -52,6 +52,14 @@ public class CategoryTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(req))
 				).andExpect(status().isOk());
+		
+		CategoryReq req2 = new CategoryReq();
+		req2.setCategory("sedan2");
+		
+		mockMvc.perform(post("/rest/category/create")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(req2))
+				).andExpect(status().isOk());
 	}
 	
 	@Test
@@ -73,19 +81,8 @@ public class CategoryTest {
 		log.debug("rc create :{}", dto.getMsg());
 	}
 	
-	
 	@Test
 	@Order(3)
-	public void deleteCategory() throws Exception{
-		log.debug("deleteCategory");
-		
-		mockMvc.perform(delete("/rest/category/delete/" +  "1"))
-	            .andExpect(status().isOk())
-	            .andExpect(jsonPath("$.msg").exists());  
-	}
-	
-	@Test
-	@Order(4)
 	public void listAllCategory() throws Exception{
 		log.debug("listAllCategory");
 		
@@ -105,7 +102,15 @@ public class CategoryTest {
 		lS.forEach(s -> log.debug(s.toString()));
 		
 	}
-
-
+	
+	@Test
+	@Order(4)
+	public void deleteCategory() throws Exception{
+		log.debug("deleteCategory");
+		
+		mockMvc.perform(delete("/rest/category/delete/" +  "1"))
+	            .andExpect(status().isOk())
+	            .andExpect(jsonPath("$.msg").exists());  
+	}
 	
 }
