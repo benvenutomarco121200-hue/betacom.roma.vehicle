@@ -29,8 +29,7 @@ public class CategoryController {
 	private final IMessageServices servMessage;
 	
 	@PostMapping("/create")
-	public ResponseEntity<ResponseDTO> create(@RequestBody(required = true) @Validated(ValidationGroups.Create.class) CategoryReq req) 
-			throws Exception{
+	public ResponseEntity<ResponseDTO> create(@RequestBody(required = true) @Validated(ValidationGroups.Create.class) CategoryReq req) throws Exception {
 		ResponseDTO r = new ResponseDTO();
 		servCategory.create(req);
 		r.setMsg(servMessage.get("rest_created"));

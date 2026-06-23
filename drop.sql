@@ -1,46 +1,20 @@
 
-    set client_min_messages = WARNING;
+    drop table if exists bicycles cascade ;
 
-    alter table if exists bicycles 
-       drop constraint if exists fk_vehicle_braketype;
+    drop table if exists brake_types cascade ;
 
-    alter table if exists bicycles 
-       drop constraint if exists fk_vehicle_suspensiontype;
+    drop table if exists cars cascade ;
 
-    alter table if exists bicycles 
-       drop constraint if exists fk_vehicle_bicycle;
+    drop table if exists category cascade ;
 
-    alter table if exists cars 
-       drop constraint if exists fk_vehicle_car;
+    drop table if exists fuel_types cascade ;
 
-    alter table if exists motorcycles 
-       drop constraint if exists fk_vehicle_motorcycle;
+    drop table if exists motorcycles cascade ;
 
-    alter table if exists vehicles 
-       drop constraint if exists fk_vehicle_category;
+    drop table if exists suspension_types cascade ;
 
-    alter table if exists vehicles 
-       drop constraint if exists fk_vehicle_fueltype;
+    drop table if exists system_message cascade ;
 
-    alter table if exists vehicles 
-       drop constraint if exists fk_vehicle_vehicletype;
+    drop table if exists vehicle_types cascade ;
 
-    drop table if exists bicycles cascade;
-
-    drop table if exists brake_types cascade;
-
-    drop table if exists cars cascade;
-
-    drop table if exists category cascade;
-
-    drop table if exists fuel_types cascade;
-
-    drop table if exists motorcycles cascade;
-
-    drop table if exists suspension_types cascade;
-
-    drop table if exists system_message cascade;
-
-    drop table if exists vehicle_types cascade;
-
-    drop table if exists vehicles cascade;
+    drop table if exists vehicles cascade ;

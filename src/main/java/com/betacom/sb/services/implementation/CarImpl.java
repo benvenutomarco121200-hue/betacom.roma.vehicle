@@ -52,9 +52,7 @@ public class CarImpl implements ICarServices {
 	public void create(CarReq req) throws Exception {
 		log.debug("create {}", req);
 		Car car = new Car();
-		
-		
-		
+
 		if (req.getLicensePlate() == null) {
 			throw new BetacomRomaException("license plate cannot be null");
 		}
@@ -72,6 +70,7 @@ public class CarImpl implements ICarServices {
 		
 		car.setDoorCount(Optional.ofNullable(req.getDoorCount())
 				.orElseThrow(() -> new BetacomRomaException("door count cannot be null")));
+		
 
 	    car.setVehicle(vehicle);
 	    vehicle.setCar(car);
